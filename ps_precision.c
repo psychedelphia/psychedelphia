@@ -1,8 +1,13 @@
+//-------------------------------------------------------------//
+// Forever a Student in C                                      //
+// Psychedelphia: https://psychedelphia.wordpress.com/         //
+//-------------------------------------------------------------//
+
 #include <stdio.h>
 
 // minimize useage of (/ → * → - → +) operator and floating-point
 // New Function Here! -------------------------------------------
-void precision(int value, double number); // double precision
+void precision(double number, int value); // double precision
 // --------------------------------------------------------------
 
 //----------------------
@@ -11,29 +16,28 @@ int main(void) {
     double x = 1.123456789012345;
     double y = 12345.1234567890152;
      
-    printf("x  = "); /* << */ precision(-1, x); /* << */ puts("");
-    printf("x  = "); /* << */ precision( 0, x); /* << */ puts("");
-    printf("x  = "); /* << */ precision( 1, x); /* << */ puts("");
-    printf("x  = "); /* << */ precision( 2, x); /* << */ puts("");
-    printf("x  = "); /* << */ precision( 3, x); /* << */ puts("");
-    printf("x  = "); /* << */ precision( 4, x); /* << */ puts("");
-    printf("x  = "); /* << */ precision( 5, x); /* << */ puts("");
+    printf("x  = "); /* << */ precision(x, -1); /* << */ puts("");
+    printf("x  = "); /* << */ precision(x,  0); /* << */ puts("");
+    printf("x  = "); /* << */ precision(x,  1); /* << */ puts("");
+    printf("x  = "); /* << */ precision(x,  2); /* << */ puts("");
+    printf("x  = "); /* << */ precision(x,  3); /* << */ puts("");
+    printf("x  = "); /* << */ precision(x,  4); /* << */ puts("");
+    printf("x  = "); /* << */ precision(x,  5); /* << */ puts("");
     printf("x  = %lf\n",  x);
-    printf("x  = "); /* << */ precision( 7, x); /* << */ puts("");
-    printf("x  = "); /* << */ precision( 8, x); /* << */ puts("");
-    printf("x  = "); /* << */ precision( 9, x); /* << */ puts("");
-    printf("x  = "); /* << */ precision(10, x); /* << */ puts("");
-    printf("x  = "); /* << */ precision(11, x); /* << */ puts("");
-    printf("x  = "); /* << */ precision(12, x); /* << */ puts("");
-    printf("x  = "); /* << */ precision(13, x); /* << */ puts("");
-    printf("x  = "); /* << */ precision(14, x); /* << */ puts("");
-    printf("x  = "); /* << */ precision(15, x); /* << */ puts("");
-    printf("x  = "); /* << */ precision(16, x); /* << */ puts("");
+    printf("x  = "); /* << */ precision(x,  7); /* << */ puts("");
+    printf("x  = "); /* << */ precision(x,  8); /* << */ puts("");
+    printf("x  = "); /* << */ precision(x,  9); /* << */ puts("");
+    printf("x  = "); /* << */ precision(x, 10); /* << */ puts("");
+    printf("x  = "); /* << */ precision(x, 11); /* << */ puts("");
+    printf("x  = "); /* << */ precision(x, 12); /* << */ puts("");
+    printf("x  = "); /* << */ precision(x, 13); /* << */ puts("");
+    printf("x  = "); /* << */ precision(x, 14); /* << */ puts("");
+    printf("x  = "); /* << */ precision(x, 15); /* << */ puts("");
 
     printf("-----\n");
 
     for (register int i = -1; i < 16; i++) {
-        printf("y  = "); /* << */ precision(i, y); /* << */ puts("");
+        printf("y  = "); /* << */ precision(y, i); /* << */ puts("");
     }
 
     return 0; 
@@ -41,7 +45,7 @@ int main(void) {
 
 //-------------------------
 // precision implementation
-void precision(int value, double number) {
+void precision(double number, int value) {
     switch (value) {
         case  1 : printf("%.1lf",  number); /* \n */ break;
         case  2 : printf("%.2lf",  number); /* \n */ break;
