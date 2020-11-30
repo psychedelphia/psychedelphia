@@ -24,7 +24,7 @@ void ps_to_binary(int value) {
     int MAX_BIT = 32;
     int mask = INT_MIN; // 10000000 00000000 00000000 00000000
   
-    // efficient for loop (0 <= value <= 2147483647)
+    // efficiency for loop (0 <= value <= 2147483647)
     if (value >= 0) {
         mask = 1073741824; // 01000000 00000000 00000000 00000000
         sign_switch = ON;
