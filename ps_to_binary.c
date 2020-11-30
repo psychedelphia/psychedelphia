@@ -56,7 +56,7 @@ void ps_to_binary(int value) {
         mask >>= 1;
               
         // prevent right shift with 1
-        if (sign_switch == OFF && i == (MAX_BIT - 1)) {
+        if (sign_switch == OFF) {
                              //    11000000 00000000 00000000 00000000
             mask ^= INT_MIN; // -> 01000000 00000000 00000000 00000000
             sign_switch = ON;
