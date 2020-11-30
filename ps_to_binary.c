@@ -1,3 +1,7 @@
+//-------------------------------------------------------------//
+// Forever a Student in C                                      //
+// Psychedelphia: https://psychedelphia.wordpress.com/         //
+//-------------------------------------------------------------//
 #include <stdio.h>
 
 // minimize useage of (/ → * → - → +) operator and floating-point
