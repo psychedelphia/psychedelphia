@@ -73,7 +73,7 @@ int * decrypt(int * decrypted, int * encrypted, int key) {
     for (register int i = 0; i < BUFFER_SIZE; i++)
         decrypted[i] = caesar_cipher(*(encrypted + i), key);
     
-    return encrypted;
+    return decrypted;
 }
 
 //-------------------------------
