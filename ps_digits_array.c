@@ -26,7 +26,17 @@ int main(void) {
     puts("");
     puts("--------------------");    
 
-    memset(digits, 0, sizeof(digits)); // initializing
+    // initializing
+    digits[0] = 0;
+    digits[1] = 0;
+    digits[2] = 0;
+    digits[3] = 0;
+    digits[4] = 0;
+    digits[5] = 0;
+    digits[6] = 0;
+    digits[7] = 0;
+    digits[8] = 0;
+    digits[9] = 0;
     for (register int i = 0; i < 10; i++) {
         printf("%d:", digits[i]);
     }
