@@ -9,8 +9,8 @@
 
 // minimize useage of (/ → * → - → +) operator and floating-point
 // New Function Here! -------------------------------------------
-int * digits_array01(int * decimal, unsigned int value); // input digits into array
-int * digits_array02(int * decimal, unsigned int value); // input digits into array
+int * digits_array01(int * digits, unsigned int value); // input digits into array
+int * digits_array02(int * digits, unsigned int value); // input digits into array
 // --------------------------------------------------------------
 
 //----------------------
