@@ -4,6 +4,7 @@
 //-------------------------------------------------------------//
 
 #include <stdio.h>
+#include <string.h>
 #include <math.h>
 
 // minimize useage of (/ → * → - → +) operator and floating-point
@@ -25,6 +26,13 @@ int main(void) {
     puts("");
     puts("--------------------");    
 
+    memset(digits, 0, sizeof(digits)); // initializing
+    for (register int i = 0; i < 10; i++) {
+        printf("%d:", digits[i]);
+    }
+    puts("");
+    puts("--------------------");
+
     digits_array02(digits, number); // digits_array02()
     for (register int i = 0; i < 10; i++) {
         printf("%d:", digits[i]);
@@ -32,6 +40,14 @@ int main(void) {
     puts("");
     puts("--------------------");
 
+    memset(digits, 0, sizeof(digits)); // initializing
+    for (register int i = 0; i < 10; i++) {
+        printf("%d:", digits[i]);
+    }
+    puts("");
+    puts("--------------------");
+
+    // digits_array01() is faster
     for (register unsigned int j = 3999999900; j < 4000000000; j++) {
         digits_array01(digits, j);
 
