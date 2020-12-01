@@ -44,6 +44,8 @@ int main(void) {
     return 0; 
 }
 
+//---------------------------
+// show_text() implementation 
 void show_text(int * text) {
     for (register int i = 0; i < BUFFER_SIZE; i++) {
         printf("%c", alphabet[*(text + i)]);
@@ -52,6 +54,8 @@ void show_text(int * text) {
     }
 }
 
+//-------------------------
+// encrypt() implementation 
 int * encrypt(int * encrypted, int * plaintext, int key) {
     if (key > 25 || key == 0) { printf("invalid key!\n"); /* \n */ return encrypted; }
 
@@ -61,6 +65,8 @@ int * encrypt(int * encrypted, int * plaintext, int key) {
     return encrypted;
 }
 
+//-------------------------
+// decrypt() implementation 
 int * decrypt(int * decrypted, int * encrypted, int key) {
     if (key < -25 || key == 0) { printf("invalid key!\n"); /* \n */ return decrypted; }
 
@@ -70,6 +76,8 @@ int * decrypt(int * decrypted, int * encrypted, int key) {
     return encrypted;
 }
 
+//-------------------------------
+// caesar_cipher() implementation 
 int caesar_cipher(int x, int key) {
     int result = x + key;
     
