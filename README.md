@@ -1,1 +1,1 @@
-ps_functions
+ps_functions in C language
