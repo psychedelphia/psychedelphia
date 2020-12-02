@@ -2,6 +2,8 @@
 // Forever a Student in C                                      //
 // Psychedelphia: https://psychedelphia.wordpress.com/         //
 //-------------------------------------------------------------//
+// Precision for double data typesdouble                       //
+//-------------------------------------------------------------//
 
 #include <stdio.h>
 
