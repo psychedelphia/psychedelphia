@@ -2,6 +2,9 @@
 // Forever a Student in C                                      //
 // Psychedelphia: https://psychedelphia.wordpress.com/         //
 //-------------------------------------------------------------//
+// Converting integer(decimal) into binary form                //
+//-------------------------------------------------------------//
+
 #include <stdio.h>
 
 // minimize useage of (/ → * → - → +) operator and floating-point
@@ -25,28 +28,28 @@ int main(void) {
 void ps_to_binary(int value) {
     const int INT_MIN = -2147483648;
     enum flag { OFF = 0, ON = 1 } sign_switch = OFF; // Off = negative, on = positive    
-    int MAX_BIT = 32;
+    int max_bit = 32;
     int mask = INT_MIN; // 10000000 00000000 00000000 00000000
   
     // efficiency for loop (0 <= value <= 2147483647)
     if (value >= 0) {
         mask = 1073741824; // 01000000 00000000 00000000 00000000
         sign_switch = ON;
-        MAX_BIT = 31;
+        max_bit = 31;
         printf("0");
         
         if (value < 16777216) { 
-            MAX_BIT = 24;
+            max_bit = 24;
             mask >>= 7;
             printf("0000000 ");
             
             if (value < 65536) {
-                MAX_BIT = 16;
+                max_bit = 16;
                 mask >>= 8;
                 printf("00000000 ");
                 
                 if (value < 256) {
-                    MAX_BIT = 8;
+                    max_bit = 8;
                     mask >>= 8;
                     printf("00000000 ");
                 }
@@ -55,7 +58,7 @@ void ps_to_binary(int value) {
     }
     
     // print 0 or 1
-    for (register int i = MAX_BIT - 1; i >= 0; i--) {
+    for (register int i = max_bit - 1; i >= 0; i--) {
         printf("%d", (value & mask) ? 1 : 0);
         mask >>= 1;
               
