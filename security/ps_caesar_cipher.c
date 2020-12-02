@@ -2,6 +2,8 @@
 // Forever a Student in C                                      //
 // Psychedelphia: https://psychedelphia.wordpress.com/         //
 //-------------------------------------------------------------//
+// Implementation of Caesar Cipher (substitution cipher)       //
+//-------------------------------------------------------------//
 
 #include <stdio.h>
 #include <stdlib.h>
