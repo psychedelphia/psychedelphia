@@ -2,6 +2,8 @@
 // Forever a Student in C                                      //
 // Psychedelphia: https://psychedelphia.wordpress.com/         //
 //-------------------------------------------------------------//
+// Calcuation: sum(1 + 2 + ... + n), (n is natural number)     //
+//-------------------------------------------------------------//
 
 #include <stdio.h>
 #include <stdlib.h>
