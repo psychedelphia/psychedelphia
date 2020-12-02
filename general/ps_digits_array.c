@@ -2,6 +2,8 @@
 // Forever a Student in C                                      //
 // Psychedelphia: https://psychedelphia.wordpress.com/         //
 //-------------------------------------------------------------//
+// Input digits(unsigned int) into array                       //
+//-------------------------------------------------------------//
 
 #include <stdio.h>
 #include <string.h>
