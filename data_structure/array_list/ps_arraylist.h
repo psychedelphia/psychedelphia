@@ -4,6 +4,8 @@
 //-------------------------------------------------------------//
 // Implementation of Array List                                //
 //-------------------------------------------------------------//
+// ps_arraylist.h                                              //
+//-------------------------------------------------------------//
 
 #define BUFFER_SIZE 20
 
@@ -36,15 +38,15 @@ ArrayList * ref; // All functions related to ArrayList can use this pointer.
 
 // Explanation of Functions ------------------------------------------------------------
 void init_st(); // initializing memory (all data = 0)
-void push_front_st(int number); // insert data in the front
-void push_back_st(int number); // insert data in the back
-void insert_st(int pos, int number); // insert data (placed in position)
-void erase_st(int pos); // erase data (placed in position)
+void push_front_st(int number); // insert datum in the front
+void push_back_st(int number); // insert datum in the back
+void insert_st(int pos, int number); // insert datum (placed in position)
+void erase_st(int pos); // erase datum (placed in position)
 void assign_st(int range, int number); // insert data (range, 1 to range number)
 void swap_st(int pos1, int pos2); // swap two data
-void front_st(); // print first data
-void back_st(); // print last data
-void at_st(int pos); //print specific data (placed in poistion)
+void front_st(); // print first datum
+void back_st(); // print last datum
+void at_st(int pos); //print specific datum (placed in poistion)
 void print_st(); // print all in memory including the rest(the rest = 0)
 void capacity_st(); // print total memory
 void size_st(); // print the number of data(in use)
