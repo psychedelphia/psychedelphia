@@ -12,7 +12,7 @@
 static char alphabet[26] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
                            //13   14   15   16   17   18   19   20   21   22   23   24   25     
                              'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
-// minimize useage of (/ → * → - → +) operator and floating-point
+// minimize usage of (/ → * → - → +) operator and floating-point
 // New Function Here! -----------------------------------------------------------
 void show_text(int * text); // print contents
 //-------------------------------------------------------------------------------
