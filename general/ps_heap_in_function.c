@@ -40,12 +40,19 @@ int main(void) {
 //----------------------
 // heap_h implementation
 char * heap_h(char * src) { // function name + "_h" (mean: heap memory(free() needed))
+char * heap_h(char * src) { // function name + "_h" (mean: heap memory(free() needed))
     char * copied = NULL;
-    unsigned long int length = strlen(src);
-    
-    copied = malloc(length + 1);
+    unsigned long int length;
 
-    if (length) { memcpy(copied, src, length); }
+    if (src != NULL) {
+        length = strlen(src);        
+        copied = malloc(length + 1);
+
+        if (length) { memcpy(copied, src, length); }
+    } else {
+        length = 0;
+        copied = malloc(1);
+    }
     
     *(copied + length) = '\0';
 
