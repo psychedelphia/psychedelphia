@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-// minimize useage of (/, *, -, +) operator and floating-point
+// minimize usage of (/, *, -, +) operator and floating-point
 // New Function Here! -----------------------------------------------------------
 void sum01(int one, int max); // 1 + 2 + … + n
 void sum02(int one, int max); // 1 + 2 + … + n
