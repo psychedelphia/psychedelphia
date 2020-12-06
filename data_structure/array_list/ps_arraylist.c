@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include "arraylist.h"
 
-extern ArrayList * __arraylist; // using pointer "arraylist" from arraylist.h
+extern ArrayList * __arraylist; // using pointer "__arraylist" from arraylist.h
 
 // functions with struct arraylist(ArrayList) -----------------------------------
 //-------------------------
