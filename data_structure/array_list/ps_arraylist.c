@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include "arraylist.h"
 
+// minimize usage of (/ → * → - → +) operator and floating-point
 extern ArrayList * __ref; // using pointer "ref" from arraylist.h
 
 // functions with struct arraylist(ArrayList) -----------------------------------
