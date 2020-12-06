@@ -9,7 +9,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-// minimize useage of (/ → * → - → +) operator and floating-point
+// minimize usage of (/ → * → - → +) operator and floating-point
 // New Function Here! -------------------------------------------
 char * heap_h(char * src); // duplicate string(new heap memory)
 // --------------------------------------------------------------
