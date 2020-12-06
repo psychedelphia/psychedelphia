@@ -9,7 +9,7 @@
 
 #define BUFFER_SIZE 20
 
-// minimize useage of (/ → * → - → +) operator and floating-point
+// minimize usage of (/ → * → - → +) operator and floating-point
 // New Struct Here! -------------------------------------------------------------
 typedef struct arraylist{
     // struct variables Here!
