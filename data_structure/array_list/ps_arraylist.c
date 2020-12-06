@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include "arraylist.h"
 
-extern ArrayList * __arraylist; // using pointer "__arraylist" from arraylist.h
+extern ArrayList * __arraylist; // using pointer "arraylist" from arraylist.h
 
 // functions with struct arraylist(ArrayList) -----------------------------------
 //-------------------------
@@ -72,7 +72,7 @@ void push_front_st(int number) { // function name + "_st" (mean: for struct)
         __arraylist->dataset[0] = number;
         __arraylist->cursor++;
     } else {
-        puts("out of bound!");
+        printf("out of bound!");
     }
 }
 
@@ -86,7 +86,7 @@ void push_back_st(int number) { // function name + "_st" (mean: for struct)
         __arraylist->dataset[__arraylist->cursor] = number;
         __arraylist->cursor++;
     } else {
-        puts("out of bound!");
+        printf("out of bound!");
     }
 }
 
@@ -119,7 +119,7 @@ void insert_st(int pos, int number) { // function name + "_st" (mean: for struct
         __arraylist->dataset[pos-1] = number;
         __arraylist->cursor++;
     } else {
-        puts("out of bound!");
+        printf("out of bound!");
     }
 }
 
@@ -151,7 +151,7 @@ void erase_st(int pos) { // function name + "_st" (mean: for struct)
         __arraylist->dataset[__arraylist->cursor - 1] = 0;
         __arraylist->cursor--;
     } else {
-        puts("out of bound!");
+        printf("out of bound!");
     }
 }
 
@@ -181,7 +181,7 @@ void assign_st(int range, int number) { // function name + "_st" (mean: for stru
             __arraylist->dataset[i] = number;
         }
     } else {
-        puts("out of bound!");
+        printf("out of bound!");
     }
     
     if (__arraylist->cursor < range) { __arraylist->cursor = range; }
