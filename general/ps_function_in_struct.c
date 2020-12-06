@@ -2,7 +2,7 @@
 // Forever a Student in C                                      //
 // Psychedelphia: https://psychedelphia.wordpress.com/         //
 //-------------------------------------------------------------//
-// Implementation of Array List                                //
+// Implementation of struct with function                      //
 //-------------------------------------------------------------//
 
 #include <stdio.h>
