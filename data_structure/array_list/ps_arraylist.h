@@ -34,7 +34,7 @@ typedef struct arraylist{
     int (* empty)();    
 } ArrayList;
 
-ArrayList * __ref = NULL; // All functions related to ArrayList can use this pointer.
+ArrayList * __ref; // All functions related to ArrayList can use this pointer.
 
 // Explanation of Functions ------------------------------------------------------------
 void init_st(); // initializing memory (all data = 0)
