@@ -191,14 +191,15 @@ void assign_st(int range, int number) { // function name + "_st" (mean: for stru
 // swap_st() implementation
 void swap_st(int pos1, int pos2) { // function name + "_st" (mean: for struct)
     long int dataset_size = sizeof(__ref->dataset) / sizeof(__ref->dataset[0]);
+    int temp;
 
     if (pos1 <= 0 || __ref->cursor < pos1 || pos2 <= 0 || __ref->cursor < pos2) {
         printf("out of bound!");
     } else if (pos1 == pos2) {
     } else {
-        __ref->dataset[pos1-1] = __ref->dataset[pos1-1] ^ __ref->dataset[pos2-1]; 
-        __ref->dataset[pos2-1] = __ref->dataset[pos2-1] ^ __ref->dataset[pos1-1]; 
-        __ref->dataset[pos1-1] = __ref->dataset[pos1-1] ^ __ref->dataset[pos2-1];     
+        temp = __ref->dataset[pos1-1];
+        __ref->dataset[pos1-1] = __ref->dataset[pos2-1]; 
+        __ref->dataset[pos2-1] = temp;     
     }
 }
     
