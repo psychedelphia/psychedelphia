@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 
-// minimize useage of (/ → * → - → +) operator and floating-point
+// minimize usage of (/ → * → - → +) operator and floating-point
 // New Function Here! -------------------------------------------
 void ps_to_binary(int value); // convert decimal into binary form
 // --------------------------------------------------------------
