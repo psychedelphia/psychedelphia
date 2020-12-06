@@ -5,10 +5,10 @@
 // Implementation of Array List                                //
 //-------------------------------------------------------------//
 
-// minimize usage of (/ → * → - → +) operator and floating-point
-
 #include <stdio.h>
 #include "arraylist.h"
+
+// minimize usage of (/ → * → - → +) operator and floating-point
 
 //----------------------
 // main() implementation 
