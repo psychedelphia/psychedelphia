@@ -17,7 +17,7 @@ typedef struct example{
     void (* push_number)(int number);
 } Example;
 
-Example * __ref; // All functions related to Example can use this pointer.
+Example * __ref = NULL; // All functions related to Example can use this pointer.
 
 // Explanation of Functions ------------------------------------------------------------
 // functions with struct example(Example) -----------------------------------
