@@ -9,7 +9,7 @@
 #include <string.h>
 #include <math.h>
 
-// minimize useage of (/ → * → - → +) operator and floating-point
+// minimize usage of (/ → * → - → +) operator and floating-point
 // New Function Here! -------------------------------------------
 int * digits_array01(int * digits, unsigned int value); // input digits into array
 int * digits_array02(int * digits, unsigned int value); // input digits into array
