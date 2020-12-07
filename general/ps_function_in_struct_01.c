@@ -24,8 +24,8 @@ Example * __example_ptr; // All functions related to Example can use this pointe
 
 // Explanation of Functions ------------------------------------------------------------
 // functions with struct example(Example) -----------------------------------
-//-----------------------------
-// push_number() implementation: input value into local variable 
+//--------------------------------
+// push_number_st() implementation: input value into local variable 
 void push_number_st(int number) { // function name + "_st" (mean: for struct)
     __example_ptr->number = number;
 }
