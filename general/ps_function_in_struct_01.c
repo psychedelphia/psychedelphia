@@ -5,7 +5,7 @@
 // Implementation of struct with function                      //
 //-------------------------------------------------------------//
 // global pointer is critical. use your own part.              // 
-// don't let the other people use this pointer.                //
+// don't let people use this pointer.                          //
 //-------------------------------------------------------------//
 
 #include <stdio.h>
