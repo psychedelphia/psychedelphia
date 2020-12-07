@@ -11,7 +11,7 @@
 
 // minimize usage of (/ → * → - → +) operator and floating-point
 // New Function Here! -------------------------------------------
-char * heap_h(char * src); // duplicate string(new heap memory)
+char * heap_h(const char * src); // duplicate string(new heap memory)
 // --------------------------------------------------------------
 
 //----------------------
@@ -37,10 +37,9 @@ int main(void) {
     return 0; 
 }
 
-//----------------------
-// heap_h implementation
-char * heap_h(char * src) { // function name + "_h" (mean: heap memory(free() needed))
-char * heap_h(char * src) { // function name + "_h" (mean: heap memory(free() needed))
+//------------------------
+// heap_h() implementation
+char * heap_h(const char * src) { // function name + "_h" (mean: heap memory(free() needed))
     char * copied = NULL;
     unsigned long int length;
 
