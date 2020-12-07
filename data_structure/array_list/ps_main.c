@@ -20,7 +20,7 @@ int main(void) {
                     at_st,       print_st,      capacity_st, 
                     size_st,     rest_st,       empty_st,
                   };  // initializing(constructor)
-__ref = &a; // for ArrayList functions(must)
+__arraylist_ptr = &a; // for ArrayList functions(must)
     
     // example
     printf("capacity: "); /* << */ a.capacity(); /* << */ puts("");  
