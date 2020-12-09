@@ -1,7 +1,6 @@
 ps_functions in C language
 
 ------ Data Type ------
-
 char = signed char [-127, +127] + all data types in this range
 
 char_t = unsigned char [0, +255] + all data types in this range
