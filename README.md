@@ -1,22 +1,22 @@
 ps_functions in C language
 
------- Data Type ------
+------ following <stdint.h> Data Types  ------
 
-char = signed char [-127, +127]
+int8_t = signed char [-127, +127]
 
-uchar = unsigned char [0, +255]
+uint8_t = unsigned char [0, +255]
 
-int16 = signed short [-32,767, +32,767]
+int16_t = signed short [-32,767, +32,767]
 
-uint16 = unsigned short [0, +65,535]
+uint16_t = unsigned short [0, +65,535]
 
-int32 = signed int [-2,147,483,647, + 2,147,483,647]
+int32_t = signed int [-2,147,483,647, + 2,147,483,647]
 
-uint32 = unsigned int [0, +4,294,967,295]
+uint32_t = unsigned int [0, +4,294,967,295]
 
-int64 = signed long int [-9,223,372,036,854,775,807, +9,223,372,036,854,775,807]
+int64_t = signed long int [-9,223,372,036,854,775,807, +9,223,372,036,854,775,807]
 
-uint64 = unsigned long int [0, +18,446,744,073,709,551,615]
+uint64_t = unsigned long int [0, +18,446,744,073,709,551,615]
 
 float
 
