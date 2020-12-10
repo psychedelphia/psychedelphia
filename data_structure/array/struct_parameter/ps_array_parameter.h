@@ -14,23 +14,6 @@ struct array{
     // struct variables Here!
     int dataset[BUFFER_SIZE];
     int cursor;
-    
-    // struct functions Here!
-    void (* init)(Array * s);
-    void (* push_front)(Array * s, int number);
-    void (* push_back)(Array * s, int number);
-    void (* insert)(Array * s, int pos, int number);
-    void (* erase)(Array * s, int pos);
-    void (* assign)(Array * s, int range, int number); 
-    void (* swap)(Array * s, int pos1, int pos2);
-    void (* front)(Array * s);
-    void (* back)(Array * s);
-    void (* at)(Array * s, int pos);
-    void (* print)(Array * s);
-    void (* capacity)(Array * s);
-    void (* size)(Array * s);
-    void (* rest)(Array * s);
-    int (* empty)(Array * s);    
 };
 
 // Explanation of Functions ------------------------------------------------------------
