@@ -22,7 +22,7 @@ float
 
 double
 
-string = it is comprised of a set of characters( with '\0' - end of character )
+string = it is comprised of a set of characters( with '\0' - end of character set )
 
 ------ Alias ------
 
