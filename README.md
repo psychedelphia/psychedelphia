@@ -29,18 +29,18 @@ double
 string = it is comprised of a set of characters( with '\0' - end of character set )
 
 
------- alias ------
+------ alias(typedef) ------
 
 alias - comment needed
 
 
------- suffix ------
+------ variables suffix ------
 
-_p(general) or _ptr(speciall) = pointer
+_p(general) _ph(heap pointer) or _ptr(speciall) = pointer
 
 
 ------ suffix of function ------
 
-_st = struct
+_st = struct (_sth = using heap memory(free() needed))
 
 _h = using heap memory(free() needed)
