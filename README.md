@@ -41,6 +41,4 @@ _p(general), _ph(heap pointer) or _ptr(speciall) = pointer
 
 ------ suffix of function ------
 
-_st = struct (_sth = using heap memory(free() needed))
-
 _h = using heap memory(free() needed)
