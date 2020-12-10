@@ -36,7 +36,7 @@ alias - comment needed
 
 ------ variables suffix ------
 
-_p(general) _ph(heap pointer) or _ptr(speciall) = pointer
+_p(general), _ph(heap pointer) or _ptr(speciall) = pointer
 
 
 ------ suffix of function ------
