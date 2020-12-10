@@ -6,19 +6,20 @@
 //-------------------------------------------------------------//
 
 #include <stdio.h>
+#include <stdint.h>
 #include <stdlib.h>
 #include <time.h>
 
 // minimize usage of (/, *, -, +) operator and floating-point
 // New Function Here! -----------------------------------------------------------
-void sum01(int one, int max); // 1 + 2 + … + n
-void sum02(int one, int max); // 1 + 2 + … + n
+void sum01(int32_t one, int32_t max); // 1 + 2 + … + n
+void sum02(int32_t one, int32_t max); // 1 + 2 + … + n
 //-------------------------------------------------------------------------------
 
 //----------------------
 // main() implementation 
-int main(void) {
-    int one, max;
+int32_t main(void) {
+    int32_t one, max;
      
     srand(time(NULL));
      
@@ -32,10 +33,10 @@ int main(void) {
     return 0; 
 }
  
-//------------------------
+//-----------------------
 // sum01() implementation
-void sum01(int one, int max) {
-    int sum;
+void sum01(int32_t one, int32_t max) {
+    int32_t sum;
      
     // (1 + (max - 1)) * ((max - 1) / 2) + max, (max is odd) 
     // (1 + max) * (max / 2), (max is even)
@@ -48,10 +49,10 @@ void sum01(int one, int max) {
     printf("case 1: sum = %d\n", sum);
 }
  
-//------------------------
+//-----------------------
 // sum02() implementation
-void sum02(int one, int max) {
-    int sum;
+void sum02(int32_t one, int32_t max) {
+    int32_t sum;
      
     // (1 + max) * ((max - 1) / 2) + ((max + 1) / 2) , (max is odd)    
     // (1 + max) * (max / 2), (max is even)
