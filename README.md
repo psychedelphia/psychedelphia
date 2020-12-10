@@ -26,7 +26,7 @@ float
 
 double
 
-string = it is comprised of a set of characters( with '\0' - end of character set )
+string = a set of characters( with '\0' - end of character set )
 
 
 ------ alias(typedef) ------
