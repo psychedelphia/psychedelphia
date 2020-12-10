@@ -10,14 +10,14 @@
 
 typedef short int               int16;
 typedef unsigned short int     uint16;
-// Data Types(often used)-----------------------------------------
+// Data Types(often used)--------------------------------------------------------
 typedef unsigned char           uchar;
 typedef wchar_t                 wchar;
 typedef int                     int32;
 typedef unsigned int           uint32;
 typedef long int                int64;
 typedef unsigned long int      uint64;
-//----------------------------------------------------------------
+//-------------------------------------------------------------------------------
 
 // minimize usage of (/ → * → - → +) operator and floating-point
 // New Function Here! -----------------------------------------------------------
