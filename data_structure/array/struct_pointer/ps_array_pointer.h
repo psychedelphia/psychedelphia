@@ -1,4 +1,5 @@
 //-------------------------------------------------------------//
+//-------------------------------------------------------------//
 // Forever a Student in C                                      //
 // Psychedelphia: https://psychedelphia.wordpress.com/         //
 //-------------------------------------------------------------//
@@ -16,23 +17,6 @@ typedef struct array{
     // struct variables Here!
     int dataset[BUFFER_SIZE];
     int cursor;
-    
-    // struct functions Here!
-    void (* init)();
-    void (* push_front)(int number);
-    void (* push_back)(int number);
-    void (* insert)(int pos, int number);
-    void (* erase)(int pos);
-    void (* assign)(int range, int number); 
-    void (* swap)(int pos1, int pos2);
-    void (* front)();
-    void (* back)();
-    void (* at)(int pos);
-    void (* print)();
-    void (* capacity)();
-    void (* size)();
-    void (* rest)();
-    int (* empty)();    
 } Array;
 
 Array * __array_ptr; // All functions related to Array can use this pointer.
