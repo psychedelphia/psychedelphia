@@ -6,7 +6,7 @@ ps_functions in C language
               *** i wish -> int8, uint8, int16, uint16, int32, uint32, int64, uint64, ... so on... *** 
               ***           char, uchar, wchar                                                     ***
 
-![#int8_t] = signed char [-127, +127] + all data types in this range(comment)
+int8_t = signed char [-127, +127] + all data types in this range(comment)
 
 uint8_t = unsigned char [0, +255] + all data types in this range(comment)
 
