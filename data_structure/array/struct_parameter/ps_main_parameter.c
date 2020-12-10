@@ -11,71 +11,65 @@
 //----------------------
 // main() implementation 
 int main(void) {
-    Array a = { { 0 }, 0, 
-                init_st,     push_front_st, push_back_st, 
-                insert_st,   erase_st,      assign_st, 
-                swap_st,     front_st,      back_st,     
-                at_st,       print_st,      capacity_st, 
-                size_st,     rest_st,       empty_st,
-              };  // initializing(constructor)
+    Array a = { { 0 }, 0 };  // initializing(constructor)
               
     // example
-    printf("capacity: "); /* << */ a.capacity(&a); /* << */ puts("");  
-    a.print(&a); /* << */ puts("");
+    printf("capacity: "); /* << */ capacity_st(&a); /* << */ puts("");  
+    print_st(&a); /* << */ puts("");
     printf("insert data\n");
-    a.push_front(&a, 1);
-    a.print(&a); /* << */ puts("");
+    push_front_st(&a, 1);
+    print_st(&a); /* << */ puts("");
     printf("insert data\n");
-    a.push_front(&a, 2);
-    a.print(&a); /* << */ puts("");
+    push_front_st(&a, 2);
+    print_st(&a); /* << */ puts("");
 
     printf("insert data\n");    
-    a.push_back(&a, 3);
-    a.print(&a); /* << */ puts("");
+    push_back_st(&a, 3);
+    print_st(&a); /* << */ puts("");
     printf("insert data\n");
-    a.push_back(&a, 4);
-    a.print(&a); /* << */ puts("");    
-    printf("first data: "); /* << */ a.front(&a); /* << */ puts("");
-    printf("last data: "); /* << */ a.back(&a); /* << */ puts("");
+    push_back_st(&a, 4);
+    print_st(&a); /* << */ puts("");    
+    printf("first data: "); /* << */ front_st(&a); /* << */ puts("");
+    printf("last data: "); /* << */ back_st(&a); /* << */ puts("");
     
-    printf("value of data[2]: "); /* << */ a.at(&a, 2); /* << */ puts("");
-    printf("value of data[3]: "); /* << */ a.at(&a, 3); /* << */ puts("");
+    printf("value of data[2]: "); /* << */ at_st(&a, 2); /* << */ puts("");
+    printf("value of data[3]: "); /* << */ at_st(&a, 3); /* << */ puts("");
 
     printf("swap data\n");
-    a.swap(&a, 1, 4);    
-    a.print(&a); /* << */ puts("");
+    swap_st(&a, 1, 4);    
+    print_st(&a); /* << */ puts("");
     printf("swap data\n");    
-    a.swap(&a, 2, 3);    
-    a.print(&a); /* << */ puts("");
+    swap_st(&a, 2, 3);    
+    print_st(&a); /* << */ puts("");
 
     printf("assign data\n");
-    a.assign(&a, 5, 3);
-    a.print(&a); /* << */ puts("");
+    assign_st(&a, 5, 3);
+    print_st(&a); /* << */ puts("");
 
     printf("insert data\n");
-    a.insert(&a, 4, 4);
-    a.print(&a); /* << */ puts("");
+    insert_st(&a, 4, 4);
+    print_st(&a); /* << */ puts("");
     printf("insert data\n");
-    a.insert(&a, 5, 5);
-    a.print(&a); /* << */ puts("");
+    insert_st(&a, 5, 5);
+    print_st(&a); /* << */ puts("");
 
     printf("erase data\n");
-    a.erase(&a, 2);
-    a.print(&a); /* << */ puts("");
+    erase_st(&a, 2);
+    print_st(&a); /* << */ puts("");
     printf("erase data\n");
-    a.erase(&a, 6);
-    a.print(&a); /* << */ puts("");
+    erase_st(&a, 6);
+    print_st(&a); /* << */ puts("");
 
-    printf("rest of array: "); /* << */ a.rest(&a); /* << */ puts("");
-    printf("size: "); /* << */ a.size(&a); /* << */ puts("");
+    printf("rest of array: "); /* << */ rest_st(&a); /* << */ puts("");
+    printf("size: "); /* << */ size_st(&a); /* << */ puts("");
     
-    if (a.empty(&a)) { printf("array is empty\n"); }
+    if (empty_st(&a)) { printf("array is empty\n"); }
     else { printf("array is not empty\n"); }
     
     printf("initializing\n");
-    a.init(&a);
-    printf("size: "); /* << */ a.size(&a); /* << */ puts("");
-    if (a.empty(&a)) { printf("array is empty\n"); }
+    init_st(&a);
+    printf("size: "); /* << */ size_st(&a); /* << */ puts("");
+    if (empty_st(&a)) { printf("array is empty\n"); }
     else { printf("array is not empty\n"); }    
     
     return 0; 
