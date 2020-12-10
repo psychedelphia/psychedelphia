@@ -2,21 +2,21 @@ ps_functions in C language
 
 ------ following <stdint.h> Data Types  ------ pollution :(
 
-int8_t = signed char [-127, +127]
+int8_t = signed char [-127, +127] + all data types in this range(comment)
 
-uint8_t = unsigned char [0, +255]
+uint8_t = unsigned char [0, +255] + all data types in this range(comment)
 
-int16_t = signed short [-32,767, +32,767]
+int16_t = signed short [-32,767, +32,767] + all data types in this range(comment)
 
-uint16_t = unsigned short [0, +65,535]
+uint16_t = unsigned short [0, +65,535] + all data types in this range(comment)
 
-int32_t = signed int [-2,147,483,647, + 2,147,483,647]
+int32_t = signed int [-2,147,483,647, + 2,147,483,647] + all data types in this range(comment)
 
-uint32_t = unsigned int [0, +4,294,967,295]
+uint32_t = unsigned int [0, +4,294,967,295] + all data types in this range(comment)
 
-int64_t = signed long int [-9,223,372,036,854,775,807, +9,223,372,036,854,775,807]
+int64_t = signed long int [-9,223,372,036,854,775,807, +9,223,372,036,854,775,807] + all data types in this range(comment)
 
-uint64_t = unsigned long int [0, +18,446,744,073,709,551,615]
+uint64_t = unsigned long int [0, +18,446,744,073,709,551,615] + all data types in this range(comment)
 
 float
 
