@@ -20,18 +20,18 @@ typedef unsigned long int      uint64;
 //-------------------------------------------------------------------------------
 
 // Global variable Here! --------------------------------------------------------
-                           // 0    1    2    3    4    5    6    7    8    9   10   11   12  
+                             // 0    1    2    3    4    5    6    7    8    9   10   11   12  
 static char alphabet[26] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-                           //13   14   15   16   17   18   19   20   21   22   23   24   25     
+                             //13   14   15   16   17   18   19   20   21   22   23   24   25     
                              'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 //-------------------------------------------------------------------------------
 
 // New Function Here! -----------------------------------------------------------
-void show_text(int32 * text); // print contents
+void show_text(int32 text[]); // print contents
 
 int32 caesar_cipher(int32 x, int32 key); // perform caesar cipher(substitution cipher)
-int32 * encrypt(int32 * encrypted, int32 * plaintext, int32 key); // encryption
-int32 * decrypt(int32 * decrypted, int32 * encrypted, int32 key); // decryption
+int32 * encrypt(int32 encrypted[], int32 plaintext[], int32 key); // encryption
+int32 * decrypt(int32 decrypted[], int32 encrypted[], int32 key); // decryption
 //-------------------------------------------------------------------------------
 
 // minimize usage of (/ → * → - → +) operator and floating-point
@@ -60,9 +60,9 @@ int32_t main(void) {
 
 //---------------------------
 // show_text() implementation 
-void show_text(int32 * text) {
+void show_text(int32 text[]) {
     for (register int32 i = 0; i < BUFFER_SIZE; i++) {
-        printf("%c", alphabet[*(text + i)]);
+        printf("%c", alphabet[text[i]]);
         fflush(stdout);
         usleep(100000);
     }
@@ -70,10 +70,10 @@ void show_text(int32 * text) {
 
 //-------------------------
 // encrypt() implementation 
-int32 * encrypt(int32 * encrypted, int32 * plaintext, int32 key) {
+int32 * encrypt(int32 encrypted[], int32 plaintext[], int32 key) {
     if (key < 26 && key > 0) { // execution
         for (register int32 i = 0; i < BUFFER_SIZE; i++)
-            encrypted[i] = caesar_cipher(*(plaintext + i), key);
+            encrypted[i] = caesar_cipher(plaintext[i], key);
     } else { // exception
         printf("invalid key!");
     }
@@ -83,10 +83,10 @@ int32 * encrypt(int32 * encrypted, int32 * plaintext, int32 key) {
 
 //-------------------------
 // decrypt() implementation 
-int32 * decrypt(int32 * decrypted, int32 * encrypted, int32 key) {
+int32 * decrypt(int32 decrypted[], int32 encrypted[], int32 key) {
     if (key > -26 && key < 0) { // execution
         for (register int32 i = 0; i < BUFFER_SIZE; i++)
-            decrypted[i] = caesar_cipher(*(encrypted + i), key);
+            decrypted[i] = caesar_cipher(encrypted[i], key);
     } else { // exception
         printf("invalid key!");
     }
