@@ -33,7 +33,7 @@ alias - comment needed
 
 ------ suffix ------
 
-_ptr = pointer
+_p(general) or _ptr(speciall) = pointer
 
 
 ------ suffix of function ------
