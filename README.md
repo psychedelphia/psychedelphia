@@ -1,5 +1,6 @@
 ps_functions in C language
 
+
 ------ following <stdint.h> Data Types  ------ pollution :(
 
 int8_t = signed char [-127, +127] + all data types in this range(comment)
@@ -24,13 +25,16 @@ double
 
 string = it is comprised of a set of characters( with '\0' - end of character set )
 
------- Alias ------
+
+------ alias ------
 
 alias - comment needed
+
 
 ------ suffix ------
 
 _ptr = pointer
+
 
 ------ suffix of function ------
 
