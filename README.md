@@ -1,6 +1,6 @@
 ps_functions in C language
 
------- following <stdint.h> Data Types  ------
+------ following <stdint.h> Data Types  ------ pollution :(
 
 int8_t = signed char [-127, +127]
 
