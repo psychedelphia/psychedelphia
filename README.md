@@ -33,18 +33,22 @@ string = a set of characters( with '\0' - end of character set )
 
 ------ naming rules ------
 
-it is up to you.
+it is up to you.(and me)
 
 ------ alias(typedef) ------(RECOMMENDED)
 
 alias - comment needed
 
+------ symbolic constant ------(RECOMMENDED)
+
+UPPER_CASE - using alphabet rather than number
 
 ------ suffix of variable ------(RECOMMENDED)
 
 _p(general), _ph(heap pointer) or _ptr(speciall) = pointer
 
-
 ------ suffix of function ------(REQUIRED)
 
 _h = using heap memory(free() needed)
+
+ 
