@@ -8,22 +8,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include "ps_datatypes.h"
 
+#define ALPHABET    26
 #define BUFFER_SIZE 23
 
-// Data Types(often used) -------------------------------------------------------
-typedef unsigned char           uchar;
-typedef int                     int32;
-typedef unsigned int           uint32;
-typedef long int                int64;
-typedef unsigned long int      uint64;
-//-------------------------------------------------------------------------------
-
 // Global variable Here! --------------------------------------------------------
-                           // 0    1    2    3    4    5    6    7    8    9   10   11   12  
-static char alphabet[26] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-                           //13   14   15   16   17   18   19   20   21   22   23   24   25     
-                             'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+static char alphabet[ALPHABET] = 
+    // 0    1    2    3    4    5    6    7    8    9   10   11   12  
+    { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+    //13   14   15   16   17   18   19   20   21   22   23   24   25     
+      'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 //-------------------------------------------------------------------------------
 
 // New Function Here! -----------------------------------------------------------
@@ -55,7 +50,7 @@ int32_t main(void) {
     
     printf("decrypted: "); /* << */ show_text(decrypted); /* << */ puts("");
     
-    return 0; 
+    return SUCCESS; 
 }
 
 //---------------------------
