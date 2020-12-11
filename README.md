@@ -32,6 +32,7 @@ float128_t = long double
 string = a set of characters( with '\0' - end of character set )
 
 ------ naming rules ------
+
 it is up to you.
 
 ------ alias(typedef) ------(RECOMMENDED)
