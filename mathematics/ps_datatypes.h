@@ -5,6 +5,8 @@
 // Data Types                                                  //
 //-------------------------------------------------------------//
 
+#define SUCCESS 0
+
 // Data Types -------------------------------------------------------------------
 typedef enum boolean { FALSE, TRUE }     bool;
 typedef unsigned char                   uchar;
