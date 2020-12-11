@@ -3,9 +3,9 @@ ps_functions in C language
 
 ------ following <stdint.h> Data Types  ------(MUST) pollution :(
   
-      *** i wish -> int8, uint8, int16, uint16, int32, uint32, int64, uint64, ... so on... *** 
-      ***           char, uchar, wchar                                                     ***
-      ***                                       float32, float64, float128                 ***
+    *** i wish -> int8, uint8, int16, uint16, int32, uint32, int64, uint64, ... so on... *** 
+    ***           char, uchar, wchar                                                     ***
+    ***                                       float32, float64, float128                 ***
 
 int8_t = signed char [-127, +127] + all data types in this range(comment)
 
