@@ -9,14 +9,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <time.h>
-
-// Data Types(often used) -------------------------------------------------------
-typedef unsigned char           uchar;
-typedef int                     int32;
-typedef unsigned int           uint32;
-typedef long int                int64;
-typedef unsigned long int      uint64;
-//-------------------------------------------------------------------------------
+#include "ps_datatypes.h"
 
 // Global variable Here! --------------------------------------------------------
 //-------------------------------------------------------------------------------
@@ -41,7 +34,7 @@ int32 main(void) {
     printf("1 ~ %d: ", max); /* << */ sum01(one, max); /* << */ puts("");
     printf("1 ~ %d: ", max); /* << */ sum02(one, max); /* << */ puts("");   
      
-    return 0; 
+    return SUCCESS; 
 }
  
 //-----------------------
