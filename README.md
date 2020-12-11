@@ -1,7 +1,7 @@
 ps_functions in C language
 
 
------- following <stdint.h> Data Types  ------ pollution :(
+------ following <stdint.h> Data Types  ------(MUST) pollution :(
   
               *** i wish -> int8, uint8, int16, uint16, int32, uint32, int64, uint64, ... so on... *** 
               ***           char, uchar, wchar                                                     ***
@@ -31,17 +31,19 @@ float128_t = long double
 
 string = a set of characters( with '\0' - end of character set )
 
+------ naming rules ------
+it is up to you.
 
------- alias(typedef) ------
+------ alias(typedef) ------(RECOMMENDED)
 
 alias - comment needed
 
 
------- suffix of variable ------
+------ suffix of variable ------(RECOMMENDED)
 
 _p(general), _ph(heap pointer) or _ptr(speciall) = pointer
 
 
------- suffix of function ------
+------ suffix of function ------(REQUIRED)
 
 _h = using heap memory(free() needed)
