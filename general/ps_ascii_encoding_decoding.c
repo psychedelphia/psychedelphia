@@ -6,24 +6,17 @@
 //-------------------------------------------------------------//
 
 #include <stdio.h>
+#include "ps_datatypes.h"
 
 #define BUFFER_SIZE 20
-
-// Data Types(often used) -------------------------------------------------------
-typedef unsigned char           uchar;
-typedef int                     int32;
-typedef unsigned int           uint32;
-typedef long int                int64;
-typedef unsigned long int      uint64;
-//-------------------------------------------------------------------------------
 
 // Global variable Here! --------------------------------------------------------
 //-------------------------------------------------------------------------------
 
 // New Function Here! -----------------------------------------------------------
 void show_binary(int32 value); // ascii to binary
-void show_char(char text[]); // print buffer(char)
-void show_int32(int32 encoded[]); // print buffer(integer)
+void print_char(char text[]); // print buffer(char)
+void print_int32(int32 encoded[]); // print buffer(integer)
 void encoding_ascii(int32 encoded[], char text[]); // encoding string to ascii code
 void decoding_ascii(char decoded[], int32 encoded[]); // decoding ascii code to string
 //-------------------------------------------------------------------------------
@@ -36,24 +29,24 @@ int32 main(void) {
     int32 encoded[BUFFER_SIZE] = { 0 };
     char decoded[BUFFER_SIZE] = { 0 };
  
-    printf("text: "); /* << */ show_char(text); /* << */ puts("");
+    printf("text: "); /* << */ print_char(text); /* << */ puts("");
     puts("");
     
     encoding_ascii(encoded, text); /* << */ puts("");    
     
-    printf("ascii: "); /* << */ show_int32(encoded); /* << */ puts("");
+    printf("ascii: "); /* << */ print_int32(encoded); /* << */ puts("");
     puts("");    
 
     decoding_ascii(decoded, encoded); /* << */ puts("");
 
-    printf("decoded: "); /* << */ show_char(decoded); /* << */ puts("");
+    printf("decoded: "); /* << */ print_char(decoded); /* << */ puts("");
 
-    return 0; 
+    return SUCCESS; 
 }
 
 //---------------------------
 // show_char() implementation
-void show_char(char text[]) {
+void print_char(char text[]) {
     for (register int32 i = 0; i < BUFFER_SIZE; i++) {
         printf(":%c", text[i]);
     }
@@ -62,7 +55,7 @@ void show_char(char text[]) {
 
 //----------------------------
 // show_int32() implementation
-void show_int32(int32 encoded[]) {
+void print_int32(int32 encoded[]) {
     for (register int32 i = 0; i < BUFFER_SIZE; i++) {
         printf(":%d", encoded[i]);
     }
