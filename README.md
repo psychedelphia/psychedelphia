@@ -5,6 +5,7 @@ ps_functions in C language
   
               *** i wish -> int8, uint8, int16, uint16, int32, uint32, int64, uint64, ... so on... *** 
               ***           char, uchar, wchar                                                     ***
+              ***                                       float32, float64, float128                 ***
 
 int8_t = signed char [-127, +127] + all data types in this range(comment)
 
@@ -22,9 +23,11 @@ int64_t = signed long int [-9,223,372,036,854,775,807, +9,223,372,036,854,775,80
 
 uint64_t = unsigned long int [0, +18,446,744,073,709,551,615] + all data types in this range(comment)
 
-float
+float32_t = float
 
-double
+float64_t = double
+
+float128_t = long double
 
 string = a set of characters( with '\0' - end of character set )
 
