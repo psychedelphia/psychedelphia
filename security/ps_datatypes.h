@@ -5,8 +5,8 @@
 // Data Types                                                  //
 //-------------------------------------------------------------//
 
-#define RETURN_SUCCESS 0
-#define RETURN_FAILURE 1
+#define SUCCESS 0
+#define FAILURE 1
 
 // Data Types -------------------------------------------------------------------
 typedef enum boolean { FALSE, TRUE }     bool;
