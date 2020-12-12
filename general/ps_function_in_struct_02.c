@@ -2,7 +2,7 @@
 // Forever a Student in C                                      //
 // Psychedelphia: https://psychedelphia.wordpress.com/         //
 //-------------------------------------------------------------//
-// Implementation of struct with function (memory problem)     //                     //
+// Implementation of struct with function (memory problem)     //                     
 //-------------------------------------------------------------//
 
 #include <stdio.h>
