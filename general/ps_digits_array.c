@@ -8,24 +8,25 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include "ps_datatypes.h"
 
 // minimize usage of (/ → * → - → +) operator and floating-point
 // New Function Here! -------------------------------------------
-int * digits_array01(int * digits, unsigned int value); // input digits into array
-int * digits_array02(int * digits, unsigned int value); // input digits into array
+int32 * digits_array01(int * digits, unsigned int value); // input digits into array
+int32 * digits_array02(int * digits, unsigned int value); // input digits into array
 // --------------------------------------------------------------
 
 //----------------------
 // main() implementation 
-int main(void) {
-    int digits[10] = { 0 }; // initializing
-    unsigned int number = 4294967; // unsigned MAX = 4,294,967,295
+int32 main(void) {
+    int32 digits[10] = { 0 }; // initializing
+    uint32 number = 4294967; // unsigned MAX = 4,294,967,295
 
     digits_array01(digits, number); // digits_array01()
-    for (register int i = 0; i < 10; i++) {
-        printf("%d:", digits[i]);
+    for (register int32 i = 0; i < 10; i++) {
+        printf(":%d", digits[i]);
     }
-    puts("");
+    printf(":\n");
     puts("--------------------");    
 
     // initializing
@@ -39,45 +40,45 @@ int main(void) {
     digits[7] = 0;
     digits[8] = 0;
     digits[9] = 0;
-    for (register int i = 0; i < 10; i++) {
-        printf("%d:", digits[i]);
+    for (register int32 i = 0; i < 10; i++) {
+        printf(":%d", digits[i]);
     }
-    puts("");
+    printf(":\n");
     puts("--------------------");
 
     digits_array02(digits, number); // digits_array02()
-    for (register int i = 0; i < 10; i++) {
-        printf("%d:", digits[i]);
+    for (register int32 i = 0; i < 10; i++) {
+        printf(":%d", digits[i]);
     }
-    puts("");
+    printf(":\n");
     puts("--------------------");
 
     memset(digits, 0, sizeof(digits)); // initializing
-    for (register int i = 0; i < 10; i++) {
-        printf("%d:", digits[i]);
+    for (register int32 i = 0; i < 10; i++) {
+        printf(":%d", digits[i]);
     }
-    puts("");
+    printf(":\n");
     puts("--------------------");
 
     // digits_array01() is faster
-    for (register unsigned int j = 3999999900; j < 4000000000; j++) {
+    for (register uint32 j = 3999999900; j < 4000000000; j++) {
         digits_array01(digits, j);
 
-        for (register int i = 0; i < 10; i++) {
-            printf("%d:", digits[i]);
+        for (register int32 i = 0; i < 10; i++) {
+            printf(":%d", digits[i]);
         }
-        puts("");
+        printf(":\n");
     }
     
-    return 0; 
+    return SUCCESS; 
 }
 
 //----------------------------
 // digits_array implementation
-int * digits_array01(int * digits, unsigned int value) {
-    int * digits_local = digits;
+int32 * digits_array01(int32 * digits, uint32 value) {
+    int32 * digits_local = digits;
     
-    for (register int i = 9; i > 0; i -= 5) {
+    for (register int32 i = 9; i > 0; i -= 5) {
         digits_local[i]   = value % 10;   
         value = value / 10;
         digits_local[i-1] = value % 10;
@@ -95,31 +96,31 @@ int * digits_array01(int * digits, unsigned int value) {
 
 //----------------------------
 // digits_array implementation
-int * digits_array02(int * digits, unsigned int value) {
-    int * digits_local = digits;
-    double before = 0.0, after = 0.0;
+int32 * digits_array02(int32 * digits, uint32 value) {
+    int32 * digits_local = digits;
+    float64 before = 0.0, after = 0.0;
     
-    before = (double)value / 1000000000;
-    digits_local[0] = (int)floor(before);
+    before = (float64)value / 1000000000;
+    digits_local[0] = (int32)floor(before);
 
-    for (register int i = 1; i < 9; i += 4) {
-        after = before - (double)digits_local[i-1];
+    for (register int32 i = 1; i < 9; i += 4) {
+        after = before - (float64)digits_local[i-1];
         before = fma(after, 10.0, 0.00000000001);
-        digits_local[i]   = (int)floor(before);
-        after = before - (double)digits_local[i];
+        digits_local[i]   = (int32)floor(before);
+        after = before - (float64)digits_local[i];
         before = fma(after, 10.0, 0.00000000001);
-        digits_local[i+1] = (int)floor(before);
-        after = before - (double)digits_local[i+1];
+        digits_local[i+1] = (int32)floor(before);
+        after = before - (float64)digits_local[i+1];
         before = fma(after, 10.0, 0.00000000001);
-        digits_local[i+2] = (int)floor(before);
-        after = before - (double)digits_local[i+2];
+        digits_local[i+2] = (int32)floor(before);
+        after = before - (float64)digits_local[i+2];
         before = fma(after, 10.0, 0.00000000001);
-        digits_local[i+3] = (int)floor(before);
+        digits_local[i+3] = (int32)floor(before);
     }
     
-    after  = before - (double)digits_local[8];
+    after  = before - (float64)digits_local[8];
     before = fma(after, 10.0, 0.00000000001);
-    digits_local[9] = (int)floor(before);
+    digits_local[9] = (int32)floor(before);
     
     return digits_local;
 }
