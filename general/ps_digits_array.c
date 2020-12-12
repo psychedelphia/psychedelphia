@@ -10,12 +10,12 @@
 #include <math.h>
 #include "ps_datatypes.h"
 
-// minimize usage of (/ → * → - → +) operator and floating-point
 // New Function Here! -------------------------------------------
 int32 * digits_array01(int * digits, unsigned int value); // input digits into array
 int32 * digits_array02(int * digits, unsigned int value); // input digits into array
 // --------------------------------------------------------------
 
+// minimize usage of (/ → * → - → +) operator and floating-point
 //----------------------
 // main() implementation 
 int32 main(void) {
