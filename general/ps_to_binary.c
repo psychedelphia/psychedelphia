@@ -6,30 +6,31 @@
 //-------------------------------------------------------------//
 
 #include <stdio.h>
+#include "ps_datatypes.h"
 
-// minimize usage of (/ → * → - → +) operator and floating-point
 // New Function Here! -------------------------------------------
-void ps_to_binary(int value); // convert decimal into binary form
+void ps_to_binary(int32 value); // convert decimal into binary form
 // --------------------------------------------------------------
 
+// minimize usage of (/ → * → - → +) operator and floating-point
 //----------------------
 // main() implementation 
-int main(void) {
-    int x = 444444444;
+int32 main(void) {
+    int32 x = 444444444;
      
     printf("x  = %10d: ",  x); /* << */ ps_to_binary(x);  /* << */ puts("");
     printf("~x = %10d: ", ~x); /* << */ ps_to_binary(~x); /* << */ puts("");
 
-  return 0; 
+  return SUCCESS; 
 }
 
 //------------------------------
 // ps_to_binary() implementation 
-void ps_to_binary(int value) {
-    const int INT_MIN = -2147483648;
+void ps_to_binary(int32 value) {
+    const int32 INT_MIN = -2147483648;
     enum flag { OFF = 0, ON = 1 } sign_switch = OFF; // Off = negative, on = positive    
-    int max_bit = 32;
-    int mask = INT_MIN; // 10000000 00000000 00000000 00000000
+    int32 max_bit = 32;
+    int32 mask = INT_MIN; // 10000000 00000000 00000000 00000000
   
     // efficiency for loop (0 <= value <= 2147483647)
     if (value >= 0) {
@@ -58,7 +59,7 @@ void ps_to_binary(int value) {
     }
     
     // print 0 or 1
-    for (register int i = max_bit - 1; i >= 0; i--) {
+    for (register int32 i = max_bit - 1; i >= 0; i--) {
         printf("%d", (value & mask) ? 1 : 0);
         mask >>= 1;
               
