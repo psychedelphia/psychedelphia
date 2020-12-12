@@ -10,11 +10,11 @@
 #include <stdlib.h>
 #include "ps_datatypes.h"
 
-// minimize usage of (/ → * → - → +) operator and floating-point
 // New Function Here! -------------------------------------------
 char * heap_h(const char * src); // duplicate string(new heap memory)
 // --------------------------------------------------------------
 
+// minimize usage of (/ → * → - → +) operator and floating-point
 //----------------------
 // main() implementation 
 int32 main(void) {
