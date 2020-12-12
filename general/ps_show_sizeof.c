@@ -15,7 +15,7 @@ void show_sizeof();
 
 //----------------------
 // main() implementation 
-int main(void) {
+int32 main(void) {
     show_sizeof();
 
     return SUCCESS; 
