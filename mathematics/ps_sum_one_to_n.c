@@ -15,8 +15,7 @@
 //-------------------------------------------------------------------------------
 
 // New Function Here! -----------------------------------------------------------
-void sum01(int32 one, int32 max); // 1 + 2 + … + n
-void sum02(int32 one, int32 max); // 1 + 2 + … + n
+void sum(int32 one, int32 max); // 1 + 2 + … + n
 //-------------------------------------------------------------------------------
 
 // minimize usage of (/, *, -, +) operator and floating-point
@@ -31,40 +30,17 @@ int32 main(void) {
     max = rand() >> 24;
      
     // sum = 1 + 2 + ... + n
-    printf("1 ~ %d: ", max); /* << */ sum01(one, max); /* << */ puts("");
-    printf("1 ~ %d: ", max); /* << */ sum02(one, max); /* << */ puts("");   
+    printf("1 ~ %d: ", max); /* << */ sum(one, max); /* << */ puts("");
      
     return SUCCESS; 
 }
  
 //-----------------------
-// sum01() implementation
-void sum01(int32 one, int32 max) {
+// sum() implementation
+void sum(int32 one, int32 max) {
     int32 sum;
-     
-    // (1 + (max - 1)) * ((max - 1) / 2) + max, (max is odd) 
-    // (1 + max) * (max / 2), (max is even)
-    if (max & 1) {
-        sum = (one + (max ^ 1)) * ((max ^ 1) >> 1) + max;  
-    } else { 
-        sum = (one + max) * (max >> 1);
-    }
-     
+
+    sum = (one + max) * (max >> 1);
+  
     printf("case 1: sum = %d", sum);
-}
- 
-//-----------------------
-// sum02() implementation
-void sum02(int32 one, int32 max) {
-    int32 sum;
-     
-    // (1 + max) * ((max - 1) / 2) + ((max + 1) / 2) , (max is odd)    
-    // (1 + max) * (max / 2), (max is even)
-    if (max & 1) {
-        sum = (one + max) * ((max ^ 1) >> 1) + ((max + 1) >> 1);  
-    } else { 
-        sum = (one + max) * (max >> 1);
-    }
-     
-    printf("case 2: sum = %d", sum);
 }
