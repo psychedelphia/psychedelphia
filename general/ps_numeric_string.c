@@ -13,7 +13,7 @@
 //-------------------------------------------------------------------------------
 
 // New Function Here! -----------------------------------------------------------
-int32 numeric_string(const char * string); // check out whether a string is numeric or not
+bool numeric_string(const char * string); // check out whether a string is numeric or not
 //-------------------------------------------------------------------------------
 
 // minimize usage of (/ → * → - → +) operator and floating-point
@@ -49,13 +49,19 @@ int32 main(void) {
     return SUCCESS; 
 }
 
-int32 numeric_string(const char * string) {
+bool numeric_string(const char * string) {
     bool state;
-    int64 length = strlen(string);
+    int64 length;
     
-    for (register int32 i = 0; i < length; i++) {
-        if (*(string + i) >= 48 && *(string + i) <= 57) { state = TRUE; }
-        else { i = length; /* \n */ state = FALSE; }
+    if (string != NULL) { // execution
+        length = strlen(string);
+        
+        for (register int32 i = 0; i < length; i++) {
+            if (*(string + i) >= 48 && *(string + i) <= 57) { state = TRUE; }
+            else { i = length; /* \n */ state = FALSE; }
+        } 
+    } else { // exception
+        state = FALSE;
     }
     
     return state;
