@@ -44,12 +44,12 @@ char * heap_h(const char * src) { // function name + "_h" (mean: heap memory(fre
     char * copied = NULL;
     uint64 length;
 
-    if (src != NULL) {
+    if (src != NULL) { // execution
         length = strlen(src);        
         copied = malloc(length + 1);
 
         if (length) { memcpy(copied, src, length); }
-    } else {
+    } else { // exception
         length = 0;
         copied = malloc(1);
     }
