@@ -8,7 +8,6 @@
 #include <stdio.h>
 #include "ps_datatypes.h"
 
-// minimize usage of (/ → * → - → +) operator and floating-point
 // New Struct Here! -------------------------------------------------------------
 typedef struct example Example;
 struct example{
@@ -27,9 +26,10 @@ void push_number_st(Example * str, int32 number) { // function name + "_st" (mea
     str->number = number;
 }
 
+// minimize usage of (/ → * → - → +) operator and floating-point
 //----------------------
 // main() implementation 
-int main(void) {
+int32 main(void) {
     Example a = { 0,             // variables
                   push_number_st // functions 
                 }; // initializing(constructor)
