@@ -39,8 +39,9 @@ void sum(int32 max) {
     int32 sum;
     
     if (max >= 1) { // execution
-        // (1 + max) * (max / 2)
+        // (1 + max) * (max / 2): Gaussian formula
         sum = (1 + max) * (max >> 1);
+        
         printf("case 1: sum = %d", sum);        
     } else { // exception
         printf("out of bound!");
