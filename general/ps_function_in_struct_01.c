@@ -5,19 +5,20 @@
 // Implementation of struct with function                      //
 //-------------------------------------------------------------//
 // global pointer is critical. use your own part.              // 
-// don't let people use this pointer.                          //
+// don't let people use this pointer. (and memory problem)     //
 //-------------------------------------------------------------//
 
 #include <stdio.h>
+#include "ps_datatypes.h"
 
 // minimize usage of (/ → * → - → +) operator and floating-point
 // New Struct Here! -------------------------------------------------------------
 typedef struct example{
     // struct variables Here!
-    int number;
+    int32 number;
     
     // struct functions Here!
-    void (* push_number)(int number);
+    void (* push_number)(int32 number);
 } Example;
 
 Example * __example_ptr; // All functions related to Example can use this pointer.
@@ -26,13 +27,13 @@ Example * __example_ptr; // All functions related to Example can use this pointe
 // functions with struct example(Example) -----------------------------------
 //--------------------------------
 // push_number_st() implementation: input value into local variable 
-void push_number_st(int number) { // function name + "_st" (mean: for struct)
+void push_number_st(int32 number) { // function name + "_st" (mean: for struct)
     __example_ptr->number = number;
 }
 
 //----------------------
 // main() implementation 
-int main(void) {
+int32 main(void) {
     Example a = { 0,             // variables
                   push_number_st // functions 
                 }; // initializing(constructor)
@@ -73,5 +74,5 @@ __example_ptr = &a; // for Example functions(must): usage of Example a
     if (b.number == c.number) { printf("equal!\n"); }
     else { printf("not equal!\n"); }
     
-    return 0; 
+    return SUCCESS; 
 }
