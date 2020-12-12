@@ -2,27 +2,28 @@
 // Forever a Student in C                                      //
 // Psychedelphia: https://psychedelphia.wordpress.com/         //
 //-------------------------------------------------------------//
-// Implementation of struct with function                      //
+// Implementation of struct with function (memory problem)     //                     //
 //-------------------------------------------------------------//
 
 #include <stdio.h>
+#include "ps_datatypes.h"
 
 // minimize usage of (/ → * → - → +) operator and floating-point
 // New Struct Here! -------------------------------------------------------------
 typedef struct example Example;
 struct example{
     // struct variables Here!
-    int number;
+    int32 number;
     
     // struct functions Here!
-    void (* push_number)(Example * str, int number);
+    void (* push_number)(Example * str, int32 number);
 };
 
 // Explanation of Functions ------------------------------------------------------------
 // functions with struct example(Example) -----------------------------------
 //--------------------------------
 // push_number_st() implementation: insert value into local variable 
-void push_number_st(Example * str, int number) { // function name + "_st" (mean: for struct)
+void push_number_st(Example * str, int32 number) { // function name + "_st" (mean: for struct)
     str->number = number;
 }
 
@@ -65,5 +66,5 @@ int main(void) {
     if (b.number == c.number) { printf("equal!\n"); }
     else { printf("not equal!\n"); }
     
-    return 0; 
+    return SUCCESS; 
 }
