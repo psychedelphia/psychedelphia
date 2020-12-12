@@ -11,7 +11,6 @@
 #include <stdio.h>
 #include "ps_datatypes.h"
 
-// minimize usage of (/ → * → - → +) operator and floating-point
 // New Struct Here! -------------------------------------------------------------
 typedef struct example{
     // struct variables Here!
@@ -31,6 +30,7 @@ void push_number_st(int32 number) { // function name + "_st" (mean: for struct)
     __example_ptr->number = number;
 }
 
+// minimize usage of (/ → * → - → +) operator and floating-point
 //----------------------
 // main() implementation 
 int32 main(void) {
