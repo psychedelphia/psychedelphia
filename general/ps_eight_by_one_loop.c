@@ -10,12 +10,12 @@
 #include <time.h>
 #include "ps_datatypes.h"
 
-// minimize usage of (/ → * → - → +) operator and floating-point
 // New Function Here! -------------------------------------------
 int32 eight_by_one(); // eight by one loop
 int32 one_by_one(); // one by one loop
 // --------------------------------------------------------------
 
+// minimize usage of (/ → * → - → +) operator and floating-point
 //----------------------
 // main() implementation 
 int32 main(void) {
