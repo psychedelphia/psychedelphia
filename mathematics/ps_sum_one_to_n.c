@@ -10,9 +10,6 @@
 #include <time.h>
 #include "ps_datatypes.h"
 
-// Global variable Here! --------------------------------------------------------
-//-------------------------------------------------------------------------------
-
 // New Function Here! -----------------------------------------------------------
 void sum(int32 max); // 1 + 2 + … + n
 //-------------------------------------------------------------------------------
@@ -42,7 +39,7 @@ void sum(int32 max) {
         // (1 + max) * (max / 2): Gaussian formula
         sum = (1 + max) * (max >> 1);
         
-        printf("case 1: sum = %d", sum);        
+        printf("sum = %d", sum);        
     } else { // exception
         printf("out of bound!");
     }
