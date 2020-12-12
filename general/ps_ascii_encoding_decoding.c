@@ -10,9 +10,6 @@
 
 #define BUFFER_SIZE 20
 
-// Global variable Here! --------------------------------------------------------
-//-------------------------------------------------------------------------------
-
 // New Function Here! -----------------------------------------------------------
 void show_binary(int32 value); // ascii to binary
 void print_char(char text[]); // print buffer(char)
