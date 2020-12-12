@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "ps_datatypes.h"
 
 // minimize usage of (/ → * → - → +) operator and floating-point
 // New Function Here! -------------------------------------------
@@ -16,7 +17,7 @@ char * heap_h(const char * src); // duplicate string(new heap memory)
 
 //----------------------
 // main() implementation 
-int main(void) {
+int32 main(void) {
     char * src = "abcd";
     char * copied = NULL;
 
@@ -34,14 +35,14 @@ int main(void) {
     copied = NULL;
     printf("text: %s,        address of copied(NULL): %p\n", copied, copied);    
     
-    return 0; 
+    return SUCCESS; 
 }
 
 //------------------------
 // heap_h() implementation
 char * heap_h(const char * src) { // function name + "_h" (mean: heap memory(free() needed))
     char * copied = NULL;
-    unsigned long int length;
+    uint64 length;
 
     if (src != NULL) {
         length = strlen(src);        
