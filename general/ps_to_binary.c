@@ -2,7 +2,7 @@
 // Forever a Student in C                                      //
 // Psychedelphia: https://psychedelphia.wordpress.com/         //
 //-------------------------------------------------------------//
-// Converting integer(decimal) into binary form                //
+// converting integer(decimal) into binary form                //
 //-------------------------------------------------------------//
 
 #include <stdio.h>
