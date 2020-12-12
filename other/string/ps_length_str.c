@@ -2,7 +2,7 @@
 // Forever a Student in C                                      //
 // Psychedelphia: https://psychedelphia.wordpress.com/         //
 //-------------------------------------------------------------//
-// create string                                               //
+// length of string                                            //
 //-------------------------------------------------------------//
 
 #include <stdio.h>
