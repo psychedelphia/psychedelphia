@@ -8,11 +8,11 @@
 #include <stdio.h>
 #include "ps_datatypes.h"
 
-// minimize usage of (/ → * → - → +) operator and floating-point
 // New Function Here! -------------------------------------------
 void precision(float64 number, int32 value); // double precision
 // --------------------------------------------------------------
 
+// minimize usage of (/ → * → - → +) operator and floating-point
 //----------------------
 // main() implementation 
 int32 main(void) {
