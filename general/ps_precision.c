@@ -2,21 +2,22 @@
 // Forever a Student in C                                      //
 // Psychedelphia: https://psychedelphia.wordpress.com/         //
 //-------------------------------------------------------------//
-// Precision for double data typesdouble                       //
+// Precision for float64(double) data types                    //
 //-------------------------------------------------------------//
 
 #include <stdio.h>
+#include "ps_datatypes.h"
 
 // minimize usage of (/ → * → - → +) operator and floating-point
 // New Function Here! -------------------------------------------
-void precision(double number, int value); // double precision
+void precision(float64 number, int32 value); // double precision
 // --------------------------------------------------------------
 
 //----------------------
 // main() implementation 
-int main(void) {
-    double x = 1.123456789012345;
-    double y = 12345.1234567890152;
+int32 main(void) {
+    float64 x = 1.123456789012345;
+    float64 y = 12345.1234567890152;
      
     printf("x  = "); /* << */ precision(x, -1); /* << */ puts("");
     printf("x  = "); /* << */ precision(x,  0); /* << */ puts("");
@@ -38,16 +39,16 @@ int main(void) {
 
     printf("-----\n");
 
-    for (register int i = -1; i < 16; i++) {
+    for (register int32 i = -1; i < 16; i++) {
         printf("y  = "); /* << */ precision(y, i); /* << */ puts("");
     }
 
-    return 0; 
+    return SUCCESS; 
 }
 
 //-------------------------
 // precision implementation
-void precision(double number, int value) {
+void precision(float64 number, int32 value) {
     switch (value) {
         case  1 : printf("%.1lf",  number); /* \n */ break;
         case  2 : printf("%.2lf",  number); /* \n */ break;
