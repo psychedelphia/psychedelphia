@@ -31,7 +31,7 @@ int32 main(void) {
     ret = cmp_str(str1, str2);
     
     if (ret == 0) {
-        printf("two string are same.\n");
+        printf("two strings are same.\n");
     } else if (ret > 0) {
         printf("left string > right string\n");
     } else {
@@ -41,7 +41,7 @@ int32 main(void) {
     ret = cmp_str(str1, str2);
     
     if (ret == 0) {
-        printf("two string are same.\n");
+        printf("two strings are same.\n");
     } else if (ret > 0) {
         printf("left string > right string\n");
     } else {
@@ -51,7 +51,7 @@ int32 main(void) {
     ret = cmp_rsub_str(str3, str1, 10, 6);
 
     if (ret == 0) {
-        printf("two string are same.\n");
+        printf("two strings are same.\n");
     } else if (ret > 0) {
         printf("left string > right string\n");
     } else {
@@ -61,7 +61,7 @@ int32 main(void) {
     ret = cmp_lrsub_str(str1, 10, 6, str4, 8, 6);
 
     if (ret == 0) {
-        printf("two string are same.\n");
+        printf("two strings are same.\n");
     } else if (ret > 0) {
         printf("left string > right string\n");
     } else {
