@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "ps_datatypes.h"
+#include "ps_string.h"
 
 // initialize and terminate string ----------------------------------------------
 char * init_str_h(const char * str) { // function name + "_h" (mean: heap memory(free() needed))
