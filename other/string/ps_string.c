@@ -3,8 +3,7 @@
 #include <stdlib.h>
 #include "ps_datatypes.h"
 
-//-------------------------------------------------------------------------------
-
+// initialize and terminate string ----------------------------------------------
 char * init_str_h(const char * str) { // function name + "_h" (mean: heap memory(free() needed))
     char * copied;
     uint64 length;
