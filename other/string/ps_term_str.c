@@ -2,16 +2,13 @@
 // Forever a Student in C                                      //
 // Psychedelphia: https://psychedelphia.wordpress.com/         //
 //-------------------------------------------------------------//
-// compare string                                              //
+// terminate string                                            //
 //-------------------------------------------------------------//
 
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include "ps_datatypes.h"
-
-// Global variable Here! --------------------------------------------------------
-//-------------------------------------------------------------------------------
 
 // New Function Here! -----------------------------------------------------------
 char * init_str_h(const char * str); // create string
