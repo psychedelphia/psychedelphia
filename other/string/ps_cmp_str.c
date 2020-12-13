@@ -13,8 +13,9 @@
 
 // New Function Here! -----------------------------------------------------------
 int32 cmp_str(const char * str1, const char * str2); // compare string
-int32 cmp_rsub_str(const char * str1, uint64 index, uint64 len, const char * str2 ); // compare string
-int32 cmp_lrsub_str(uint64 index1, uint64 len1, const char * str1, uint64 index2, uint64 len2, const char * str2 ); // compare string
+int32 cmp_rsub_str(const char * str1, const char * str2, uint64 index, uint64 len); // compare string
+int32 cmp_lrsub_str(const char * str1, uint64 index1, uint64 len1, 
+                    const char * str2, uint64 index2, uint64 len2); // compare string
 //-------------------------------------------------------------------------------
 
 // minimize usage of (/ → * → - → +) operator and floating-point
@@ -47,7 +48,7 @@ int32 main(void) {
         printf("left string < right string\n");
     }
     
-    ret = cmp_rsub_str(str3, 10, 6, str1);
+    ret = cmp_rsub_str(str3, str1, 10, 6);
 
     if (ret == 0) {
         printf("two string are same.\n");
@@ -57,7 +58,7 @@ int32 main(void) {
         printf("left string < right string\n");
     }
     
-    ret = cmp_lrsub_str(10, 6, str1, 8, 6, str4);
+    ret = cmp_lrsub_str(str1, 10, 6, str4, 8, 6);
 
     if (ret == 0) {
         printf("two string are same.\n");
@@ -75,7 +76,7 @@ int32 main(void) {
     return SUCCESS; 
 }
 
-int32 cmp_lrsub_str(uint64 index1, uint64 len1, const char * str1, uint64 index2, uint64 len2, const char * str2) {
+int32 cmp_lrsub_str(const char * str1, uint64 index1, uint64 len1, const char * str2, uint64 index2, uint64 len2) {
     char * sub1, * sub2;
     int32 result;
     uint64 str1len, str2len;
@@ -128,7 +129,7 @@ int32 cmp_lrsub_str(uint64 index1, uint64 len1, const char * str1, uint64 index2
     return result;
 }
 
-int32 cmp_rsub_str(const char * str1, uint64 index, uint64 len, const char * str2) {
+int32 cmp_rsub_str(const char * str1, const char * str2, uint64 index, uint64 len) {
     char * sub;
     int32 result;
     uint64 str2len;
