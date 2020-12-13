@@ -9,11 +9,10 @@
 #include <string.h>
 #include <stdlib.h>
 #include "ps_datatypes.h"
+#include "ps_string.h"
 
 // New Function Here! -----------------------------------------------------------
 bool numeric_str(const char * str); // numeric string or not
-
-char * init_str_h(const char * str); // create string
 //-------------------------------------------------------------------------------
 
 // minimize usage of (/ → * → - → +) operator and floating-point
@@ -40,12 +39,9 @@ int32 main(void) {
     if (state) { printf("a string is numeric.\n"); }
     else { printf("a string is not numeric.\n"); }    
 
-    free(str1);
-    str1 = NULL;
-    free(str2);
-    str2 = NULL;
-    free(str3);
-    str3 = NULL;
+    str1 = term_str(str1);
+    str2 = term_str(str2);
+    str3 = term_str(str3);
     
     return SUCCESS; 
 }
@@ -66,27 +62,4 @@ bool numeric_str(const char * str) {
     }
     
     return state;
-}
-
-char * init_str_h(const char * str) { // function name + "_h" (mean: heap memory(free() needed))
-    char * copied;
-    uint64 length;
-
-    if (str != NULL) { // execution
-        length = strlen(str);        
-    } else { // exception
-        length = 0;
-    }
-    
-    copied = (char * )malloc(sizeof(char) * (length + 1));
-
-    if (copied != NULL) { // execution
-        if (length) { memcpy(copied, str, length); }
-    
-        *(copied + length) = '\0';
-    } else { // exception
-        printf("memory is not enough!");
-    }
-
-    return copied;
 }
