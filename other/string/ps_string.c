@@ -23,7 +23,7 @@ char * init_str_h(const char * str) { // function name + "_h" (mean: heap memory
         *(copied + length) = '\0';
     } else { // exception
         printf("memory is not allocated!");
-        exit(EXIT_SUCCESS);
+        exit(EXIT_FAILURE);
     }
 
     return copied;
