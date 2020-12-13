@@ -94,7 +94,7 @@ int32 cmp_lrsub_str(const char * str1, uint64 index1, uint64 len1, const char * 
                     memcpy(sub1, str1 + index1, len1);
                 } else { // exception
                     printf("str1: memory is not allocated!");
-                    exit(EXIT_SUCCESS); 
+                    exit(EXIT_FAILURE); 
                 }
 
                 sub2 = (char * )malloc(sizeof(char) * (len2 + 1));
@@ -104,7 +104,7 @@ int32 cmp_lrsub_str(const char * str1, uint64 index1, uint64 len1, const char * 
                     memcpy(sub2, str2 + index2, len2);
                 } else { // exception
                     printf("str2: memory is not allocated!");
-                    exit(EXIT_SUCCESS); 
+                    exit(EXIT_FAILURE); 
                 }
 
                 result = cmp_str(sub1, sub2);
@@ -113,15 +113,15 @@ int32 cmp_lrsub_str(const char * str1, uint64 index1, uint64 len1, const char * 
                 sub2 = term_str(sub2);  
             } else { // exception
                 printf("str2: out of bound!");
-                exit(EXIT_SUCCESS);
+                exit(EXIT_FAILURE);
             }
         } else { // exception
             printf("str1: out of bound!");
-            exit(EXIT_SUCCESS);
+            exit(EXIT_FAILURE);
         }
     } else { // exception
         printf("NULL found!");
-        exit(EXIT_SUCCESS);
+        exit(EXIT_FAILURE);
     }
     
     return result;
@@ -143,7 +143,7 @@ int32 cmp_rsub_str(const char * str1, const char * str2, uint64 index, uint64 le
                 memcpy(sub, str2 + index, len);
             } else { // exception
                 printf("memory is not allocated!");
-                exit(EXIT_SUCCESS); 
+                exit(EXIT_FAILURE); 
             }
             
             result = cmp_str(str1, sub);
@@ -151,11 +151,11 @@ int32 cmp_rsub_str(const char * str1, const char * str2, uint64 index, uint64 le
             sub = term_str(sub);
         } else { // exception
            printf("str2: out of bound!");
-           exit(EXIT_SUCCESS);
+           exit(EXIT_FAILURE);
         }
     } else { // exception
         printf("NULL found!");
-        exit(EXIT_SUCCESS);
+        exit(EXIT_FAILURE);
     }
     
     return result;
