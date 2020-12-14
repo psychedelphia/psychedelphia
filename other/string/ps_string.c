@@ -32,8 +32,9 @@ char * init_str_h(const char * str) { // function name + "_h" (mean: heap memory
 char * term_str(char * this) {
     if (this != NULL) { // execution
         free(this);
-        this = NULL;
-    } 
+    }
+    
+    this = NULL;
 
     return this;   
 }
