@@ -22,7 +22,7 @@ struct example{
 // functions with struct example(Example) -----------------------------------
 //--------------------------------
 // push_number_st() implementation: insert value into local variable 
-void push_number_st(Example * str, int32 number) { // function name + "_st" (mean: for struct)
+void push_number_st(Example * str, int32 number) { // function name + "_st" (meaning: for struct)
     str->number = number;
 }
 
