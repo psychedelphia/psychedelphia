@@ -14,7 +14,7 @@
 // New Function Here! -----------------------------------------------------------
 char * apnd_str_h(char * this, const char * str); // append new string
 char * apnd_char_str_h(char * this, const char c, int32 num); // append new character
-char * apnd_ssub_str_h(char * this, const char * str, int32 len); // append new string(front)
+char * apnd_fsub_str_h(char * this, const char * str, int32 len); // append new string(front)
 char * apnd_isub_str_h(char * this, const char * str, int32 index, int32 len); // append new sub-string
 //-------------------------------------------------------------------------------
 
@@ -31,7 +31,7 @@ int32 main(void) {
     str2 = apnd_char_str_h(str2, '$', 5);
     print_str(str2); /* << */ puts("");    
 
-    str1 = apnd_ssub_str_h(str1, str2, 3);
+    str1 = apnd_fsub_str_h(str1, str2, 3);
     print_str(str1); /* << */ puts("");
 
     str2 = apnd_isub_str_h(str2, str1, 5, 4);
@@ -97,7 +97,7 @@ char * apnd_char_str_h(char * this, const char c, int num) {
     return append;   
 }
 
-char * apnd_ssub_str_h(char * this, const char * str, int32 len) {
+char * apnd_fsub_str_h(char * this, const char * str, int32 len) {
     char * append = NULL;
     uint64 thislength, strlength;
 
