@@ -47,3 +47,7 @@ void print_str(const char * str) {
 void printn_str(const char * str) {
     printf("%s\n", str);
 }
+
+void length_str(const char * str) {
+    printf("%ld", strlen(str));
+}
