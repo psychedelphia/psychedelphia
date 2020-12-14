@@ -28,10 +28,10 @@ int32 main(void) {
     str1 = apnd_str_h(str1, str2);
     print_str(str1); /* << */ puts("");    
 
-    str2 = apnd_char_str_h(str2,'$', 5);
+    str2 = apnd_char_str_h(str2, '$', 5);
     print_str(str2); /* << */ puts("");    
 
-    str1 = apnd_ssub_str_h(str1,str2, 3);
+    str1 = apnd_ssub_str_h(str1, str2, 3);
     print_str(str1); /* << */ puts("");
 
     str2 = apnd_isub_str_h(str2, str1, 5, 4);
