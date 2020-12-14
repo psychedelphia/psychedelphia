@@ -29,17 +29,13 @@ char * init_str_h(const char * str) { // function name + "_h" (mean: heap memory
     return copied;
 }
 
-char * term_str(char * str) {
-    char * removed;
-
-    if (str != NULL) { // execution
-        removed = str;
-        free(removed);
+char * term_str(char * this) {
+    if (this != NULL) { // execution
+        free(this);
+        this = NULL;
     } 
-    
-    removed = NULL;
- 
-    return removed;   
+
+    return this;   
 }
 //-------------------------------------------------------------------------------
 
