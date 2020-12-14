@@ -43,3 +43,7 @@ char * term_str(char * this) {
 void print_str(const char * str) {
     printf("%s", str);
 }
+
+void printn_str(const char * str) {
+    printf("%s\n", str);
+}
