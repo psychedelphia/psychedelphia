@@ -3,4 +3,5 @@ char * init_str_h(const char * str); // create string
 char * term_str(char * str); // terminate string
 //-------------------------------------------------------------------------------
 
-void print_str(const char * str);
+void print_str(const char * str); // print string
+void printn_str(const char * str); // print string(+ newline)
