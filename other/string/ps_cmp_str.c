@@ -112,11 +112,11 @@ int32 cmp_lrsub_str(const char * str1, uint64 index1, uint64 len1, const char * 
                 sub1 = term_str(sub1);
                 sub2 = term_str(sub2);  
             } else { // exception
-                printf("str2: out of bound!");
+                printf("str2: out of bounds!");
                 exit(EXIT_FAILURE);
             }
         } else { // exception
-            printf("str1: out of bound!");
+            printf("str1: out of bounds!");
             exit(EXIT_FAILURE);
         }
     } else { // exception
@@ -150,7 +150,7 @@ int32 cmp_rsub_str(const char * str1, const char * str2, uint64 index, uint64 le
             
             sub = term_str(sub);
         } else { // exception
-           printf("str2: out of bound!");
+           printf("str2: out of bounds!");
            exit(EXIT_FAILURE);
         }
     } else { // exception
