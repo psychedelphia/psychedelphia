@@ -51,3 +51,21 @@ void printn_str(const char * str) {
 void length_str(const char * str) {
     printf("%ld", strlen(str));
 }
+
+bool numeric_str(const char * str) {
+    bool state;
+    int64 length;
+    
+    if (str != NULL) { // execution
+        length = strlen(str);
+        
+        for (register int32 i = 0; i < length; i++) {
+            if (*(str + i) >= 48 && *(str + i) <= 57) { state = TRUE; }
+            else { i = length; /* \n */ state = FALSE; }
+        } 
+    } else { // exception
+        state = FALSE;
+    }
+    
+    return state;
+}
