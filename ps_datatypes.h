@@ -5,15 +5,17 @@
 // Data Types                                                  //
 //-------------------------------------------------------------//
 
+#include <uchar.h>
 #include <wchar.h>
 
 #define SUCCESS 0
 
 // Data Types -------------------------------------------------------------------
 typedef enum boolean { FALSE, TRUE }     bool;
-typedef char                            char8;
-typedef unsigned char                  uchar8;
+typedef unsigned char                   uchar;
 typedef wchar_t                         wchar;
+typedef char16_t                       char16;
+typedef char32_t                       char32;
 typedef short int                       int16;
 typedef unsigned short int             uint16;
 typedef int                             int32;
