@@ -12,7 +12,7 @@
 #include "ps_string.h"
 
 // New Function Here! -----------------------------------------------------------
-char * term_str(char * str); // terminate string
+char * term_str(char * this); // terminate string
 //-------------------------------------------------------------------------------
 
 // minimize usage of (/ → * → - → +) operator and floating-point
@@ -30,15 +30,11 @@ int32 main(void) {
     return SUCCESS; 
 }
 
-char * term_str(char * str) {
-    char * removed;
-
-    if (str != NULL) { // execution
-        removed = str;
-        free(removed);
+char * term_str(char * this) {
+    if (this != NULL) { // execution
+        free(this);
+        this = NULL;
     } 
-    
-    removed = NULL;
- 
-    return removed;   
+
+    return this;   
 }
