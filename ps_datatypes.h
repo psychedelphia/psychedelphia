@@ -11,7 +11,8 @@
 
 // Data Types -------------------------------------------------------------------
 typedef enum boolean { FALSE, TRUE }     bool;
-typedef unsigned char                   uchar;
+typedef char                            char8;
+typedef unsigned char                  uchar8;
 typedef wchar_t                         wchar;
 typedef short int                       int16;
 typedef unsigned short int             uint16;
