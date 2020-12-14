@@ -37,6 +37,9 @@ int32 main(void) {
     str2 = apnd_isub_str_h(str2, str1, 5, 4);
     print_str(str2); /* << */ puts("");
     
+    str1 = term_str(str1);
+    str2 = term_str(str2);
+    
     return SUCCESS; 
 }
 
