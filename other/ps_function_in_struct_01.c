@@ -26,7 +26,7 @@ Example * __example_ptr; // All functions related to Example can use this pointe
 // functions with struct example(Example) -----------------------------------
 //--------------------------------
 // push_number_st() implementation: input value into local variable 
-void push_number_st(int32 number) { // function name + "_st" (mean: for struct)
+void push_number_st(int32 number) { // function name + "_st" (meaning: for struct)
     __example_ptr->number = number;
 }
 
