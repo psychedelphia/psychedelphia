@@ -23,7 +23,8 @@ int32 main(void) {
 
     printf("string: %s, address: %p\n", str1, str1);
 
-    str1 = term_str(str1);
+  //term_str(str1); it is possible.
+    str1 = term_str(str1); // recommended
 
     printf("after terminated - string: %s, address: %p\n", str1, str1);
     
