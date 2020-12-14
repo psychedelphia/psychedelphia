@@ -40,7 +40,7 @@ int32 main(void) {
 
 //------------------------
 // heap_h() implementation
-char * heap_h(const char * src) { // function name + "_h" (mean: heap memory(free() needed))
+char * heap_h(const char * src) { // function name + "_h" (meaning: heap memory(free() needed))
     char * copied = NULL;
     uint64 length;
 
