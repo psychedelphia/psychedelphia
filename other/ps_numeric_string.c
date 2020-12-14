@@ -55,7 +55,7 @@ bool numeric_string(const char * string) {
         
         for (register int32 i = 0; i < length; i++) {
             if (*(string + i) >= 48 && *(string + i) <= 57) { state = TRUE; }
-            else { i = length; /* \n */ state = FALSE; }
+            else                                            { state = FALSE; /* \n */ i = length; }
         } 
     } else { // exception
         state = FALSE;
