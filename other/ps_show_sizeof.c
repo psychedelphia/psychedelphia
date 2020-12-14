@@ -15,7 +15,7 @@ void show_sizeof();
 
 //----------------------
 // main() implementation 
-int32 main(void) {
+int main(void) {
     show_sizeof();
 
     return SUCCESS; 
@@ -24,9 +24,11 @@ int32 main(void) {
 void show_sizeof() {
     printf("char     size: %ld\n", sizeof(char));
     printf("uchar    size: %ld\n", sizeof(uchar));
+    printf("char16   size: %ld\n", sizeof(char16));
     printf("int16    size: %ld\n", sizeof(int16));
     printf("uint16   size: %ld\n", sizeof(uint16));
     printf("wchar    size: %ld\n", sizeof(wchar));
+    printf("char32   size: %ld\n", sizeof(char32));    
     printf("int32    size: %ld\n", sizeof(int32));
     printf("uint32   size: %ld\n", sizeof(uint32));
     printf("float32  size: %ld\n", sizeof(float32));
