@@ -43,7 +43,7 @@ int32 main(void) {
     return SUCCESS; 
 }
 
-char * apnd_str_h(char * this, const char * str) {
+char * apnd_str_h(char * this, const char * str) { // function name + "_h" (meaning: heap memory(free() needed))
     char * append = NULL;
     uint64 thislength, strlength;
 
@@ -73,7 +73,7 @@ char * apnd_str_h(char * this, const char * str) {
     return append;   
 }
 
-char * apnd_char_str_h(char * this, const char c, int num) {
+char * apnd_char_str_h(char * this, const char c, int num) { // function name + "_h" (meaning: heap memory(free() needed))
     char * append = NULL;
     uint64 thislength;
 
@@ -97,7 +97,7 @@ char * apnd_char_str_h(char * this, const char c, int num) {
     return append;   
 }
 
-char * apnd_fsub_str_h(char * this, const char * str, int32 len) {
+char * apnd_fsub_str_h(char * this, const char * str, int32 len) { // function name + "_h" (meaning: heap memory(free() needed))
     char * append = NULL;
     uint64 thislength, strlength;
 
@@ -122,7 +122,7 @@ char * apnd_fsub_str_h(char * this, const char * str, int32 len) {
                 exit(EXIT_FAILURE);
             }
         } else { // exception
-            printf("st2: out of bound!");
+            printf("st2: out of bounds!");
             exit(EXIT_FAILURE);
         }
     } else { // exception
@@ -132,7 +132,7 @@ char * apnd_fsub_str_h(char * this, const char * str, int32 len) {
     return append;   
 }
 
-char * apnd_isub_str_h(char * this, const char * str, int32 index, int32 len) {
+char * apnd_isub_str_h(char * this, const char * str, int32 index, int32 len) { // function name + "_h" (meaning: heap memory(free() needed))
     char * append = NULL;
     uint64 thislength, strlength;
 
@@ -157,7 +157,7 @@ char * apnd_isub_str_h(char * this, const char * str, int32 index, int32 len) {
                 exit(EXIT_FAILURE);
             }
         } else { // exception
-            printf("st2: out of bound!");
+            printf("st2: out of bounds!");
             exit(EXIT_FAILURE);
         }
     } else { // exception
