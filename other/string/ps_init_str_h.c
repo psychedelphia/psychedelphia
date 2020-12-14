@@ -34,7 +34,7 @@ int32 main(void) {
     return SUCCESS; 
 }
 
-char * init_str_h(const char * str) { // function name + "_h" (mean: heap memory(free() needed))
+char * init_str_h(const char * str) { // function name + "_h" (meaning: heap memory(free() needed))
     char * copied;
     uint64 length;
 
