@@ -2,7 +2,7 @@
 // Forever a Student in C                                      //
 // Psychedelphia: https://psychedelphia.wordpress.com/         //
 //-------------------------------------------------------------//
-// print string(+ newline)                                                //
+// print string(+ newline)                                     //
 //-------------------------------------------------------------//
 
 #include <stdio.h>
