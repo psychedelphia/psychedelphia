@@ -34,7 +34,7 @@ int32 main(void) {
     return SUCCESS; 
 }
 
-char * clear_str_h(char * str) {
+char * clear_str_h(char * str) { // function name + "_h" (meaning: heap memory(free() needed))
     char * removed;
 
     if (str != NULL) { // execution
