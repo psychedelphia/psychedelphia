@@ -5,7 +5,7 @@
 #include "ps_string.h"
 
 // initialize and terminate string ----------------------------------------------
-char * init_str_h(const char * str) { // function name + "_h" (mean: heap memory(free() needed))
+char * init_str_h(const char * str) { // function name + "_h" (meaning: heap memory(free() needed))
     char * copied;
     uint64 length;
 
@@ -32,10 +32,9 @@ char * init_str_h(const char * str) { // function name + "_h" (mean: heap memory
 char * term_str(char * this) {
     if (this != NULL) { // execution
         free(this);
+        this = NULL;
     }
     
-    this = NULL;
-
     return this;   
 }
 //-------------------------------------------------------------------------------
