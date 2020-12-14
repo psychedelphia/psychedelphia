@@ -41,6 +41,6 @@ void sum(int32 max) {
         
         printf("sum = %d", sum);        
     } else { // exception
-        printf("out of bound!");
+        printf("out of bounds!");
     }
 }
