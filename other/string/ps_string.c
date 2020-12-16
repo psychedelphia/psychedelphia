@@ -47,6 +47,10 @@ void printn_str(const char * str) {
     printf("%s\n", str);
 }
 
+void address_str(const char * str) {
+    printf("address: [%p], string: [%s]", str, str);
+}
+
 void length_str(const char * str) {
     printf("%ld", strlen(str));
 }
