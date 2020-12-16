@@ -38,7 +38,7 @@ char * init_str_h(const char * str) { // function name + "_h" (meaning: heap mem
     char * copied;
     uint64 length;
 
-    if (str != NULL) { // execution
+    if (str) { // execution
         length = strlen(str);        
     } else { // exception
         length = 0;
@@ -46,7 +46,7 @@ char * init_str_h(const char * str) { // function name + "_h" (meaning: heap mem
     
     copied = (char * )malloc(sizeof(char) * (length + 1));
 
-    if (copied != NULL) { // execution
+    if (copied) { // execution
         if (length) { memcpy(copied, str, length); }
     
         *(copied + length) = '\0';
