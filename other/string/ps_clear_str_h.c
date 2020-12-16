@@ -44,7 +44,7 @@ char * clear_str_h(char * this) {
         this = (char * )realloc(this, sizeof(char));
         
         if (!this) {
-            temp = term_str(this);
+            temp = term_str(temp);
             printf("memory is not allocated!");
             exit(EXIT_FAILURE);
         }
