@@ -34,23 +34,21 @@ int32 main(void) {
     return SUCCESS; 
 }
 
-char * clear_str_h(char * str) { // function name + "_h" (meaning: heap memory(free() needed))
-    char * removed;
+char * clear_str_h(char * this) {
+    char * temp;
 
-    if (str != NULL) { // execution
-        removed = str;
-        free(removed);
+    if (this) { // execution
+        memset(this, '\0', strlen(this));        
+        temp = this;
+        
+        this = (char * )realloc(this, sizeof(char));
+        
+        if (!this) {
+            temp = term_str(this);
+            printf("memory is not allocated!");
+            exit(EXIT_FAILURE);
+        }
     } 
     
-    removed = NULL;
-    removed = (char * )malloc(sizeof(char));
-    
-    if (removed != NULL) { // execution
-        *removed = '\0';        
-    } else { // exception
-        printf("memory is not allocated!");
-        exit(EXIT_FAILURE);
-    }
- 
-    return removed;   
+    return this;   
 }
