@@ -35,7 +35,7 @@ int32 main(void) {
 }
 
 char * clear_str_h(char * this) {
-    if (this) { // execution
+    if (this) {
         memset(this, '\0', strlen(this));        
     } 
     
