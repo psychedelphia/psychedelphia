@@ -32,7 +32,7 @@ int32 main(void) {
 }
 
 char * term_str(char * this) {
-    if (this != NULL) { // execution
+    if (this) { // execution
         free(this);
         this = NULL;
     } 
