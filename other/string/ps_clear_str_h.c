@@ -35,19 +35,8 @@ int32 main(void) {
 }
 
 char * clear_str_h(char * this) {
-    char * temp;
-
     if (this) { // execution
         memset(this, '\0', strlen(this));        
-        temp = this;
-        
-        this = (char * )realloc(this, sizeof(char));
-        
-        if (!this) {
-            temp = term_str(temp);
-            printf("memory is not allocated!");
-            exit(EXIT_FAILURE);
-        }
     } 
     
     return this;   
