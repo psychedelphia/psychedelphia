@@ -32,5 +32,6 @@ int32 main(void) {
 }
 
 void address_str(const char * str) {
-    printf("address: [%p], string: [%s]", str, str);
+    if (this) { printf("%p", this); } // this != NULL
+    else      { printf("(nil)"); } // this == NULL
 }
