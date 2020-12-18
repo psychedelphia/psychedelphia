@@ -32,5 +32,6 @@ int32 main(void) {
 }
 
 void printn_str(const char * str) {
-    printf("%s\n", str);
+    if (this) { printf("%s\n", this); } // this != NULL
+    else      { printf("(null)\n"); } // this == NULL
 }
