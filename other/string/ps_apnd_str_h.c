@@ -177,7 +177,7 @@ char * apnd_isub_str_h(char * this, const char * str, int32 index, int32 len) { 
                 temp = this;
                 this = (char * )realloc(this, sizeof(char) * (thislength + len + 1));
         
-                if (this) { // executio       
+                if (this) { // execution       
                     memcpy(this + thislength, str + index, len);  
                     *(this + thislength + len) = '\0';
                 } else { // exception
