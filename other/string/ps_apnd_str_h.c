@@ -61,7 +61,6 @@ char * apnd_str_h(char * this, const char * str) { // function name + "_h" (mean
             this = (char * )realloc(this, sizeof(char) * (thislength + strlength + 1));
 
             if (this) { // execution
-                memcpy(this, temp, thislength);
                 memcpy(this + thislength, str, strlength);
                 *(this + thislength + strlength) = '\0';
             } else { // exception
@@ -97,7 +96,6 @@ char * apnd_char_str_h(char * this, const char c, int num) { // function name + 
             this = (char * )realloc(this, sizeof(char) * (thislength + num + 1));
         
             if (this) { // execution
-                memcpy(this, temp, thislength);
                 memset(this + thislength, c, num);
                 *(this + thislength + num) = '\0';
             } else { // exception
@@ -138,8 +136,7 @@ char * apnd_fsub_str_h(char * this, const char * str, int32 len) { // function n
                 temp = this;
                 this = (char * )realloc(this, sizeof(char) * (thislength + len + 1));
         
-                if (this) { // execution
-                    memcpy(this, temp, thislength);                 
+                if (this) { // execution         
                     memcpy(this + thislength, str, len);
                     *(this + thislength + len) = '\0';
                 } else { // exception
@@ -180,8 +177,7 @@ char * apnd_isub_str_h(char * this, const char * str, int32 index, int32 len) { 
                 temp = this;
                 this = (char * )realloc(this, sizeof(char) * (thislength + len + 1));
         
-                if (this) { // execution
-                    memcpy(this, temp, thislength);            
+                if (this) { // executio       
                     memcpy(this + thislength, str + index, len);  
                     *(this + thislength + len) = '\0';
                 } else { // exception
