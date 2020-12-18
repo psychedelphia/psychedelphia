@@ -34,5 +34,6 @@ int32 main(void) {
 }
 
 void length_str(const char * str) {
-    printf("%ld", strlen(str));
+    if (this) { printf("%ld", strlen(this)); } // this != NULL
+    else      { printf("(null)"); } // this == NULL
 }
