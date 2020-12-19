@@ -20,7 +20,7 @@ int32_t = signed int [-2,147,483,647, + 2,147,483,647] + all data types in this 
 uint32_t = unsigned int [0, +4,294,967,295] + all data types in this range(comment)
 
 int64_t = signed long int [-9,223,372,036,854,775,807, +9,223,372,036,854,775,807]<br/>
-          + all data types in this range(comment)
+&emsp;&emsp;+ all data types in this range(comment)
 
 uint64_t = unsigned long int [0, +18,446,744,073,709,551,615] + all data types in this range(comment)
 
