@@ -20,7 +20,7 @@ int32_t = signed int [-2,147,483,647, + 2,147,483,647] + all data types in this 
 uint32_t = unsigned int [0, +4,294,967,295] + all data types in this range(comment)
 
 int64_t = signed long int [-9,223,372,036,854,775,807, +9,223,372,036,854,775,807]<br/>
-&emsp;&emsp;+ all data types in this range(comment)
+&emsp;&emsp;&emsp;&emsp;+ all data types in this range(comment)
 
 uint64_t = unsigned long int [0, +18,446,744,073,709,551,615] + all data types in this range(comment)
 
@@ -30,26 +30,24 @@ float64_t = double
 
 float128_t = long double
 
-string = a set of characters( with '\0' - end of character set )
+string = a set of characters( with '\0' - end of character set )<br/><br/>
 
 ------ naming rules ------
 
-it is up to you.(and me)
+it is up to you.(and me)<br/><br/>
 
 ------ alias(typedef) ------(RECOMMENDED)
 
-alias - comment needed
+alias - comment needed<br/><br/>
 
 ------ symbolic constant ------(RECOMMENDED)
 
-UPPER_CASE - using alphabet rather than number
+UPPER_CASE - using alphabet rather than number<br/><br/>
 
 ------ suffix of variable ------(RECOMMENDED)
 
-_p(general), _ph(heap pointer) or _ptr(speciall) = pointer
+_p(general), _ph(heap pointer) or _ptr(speciall) = pointer<br/><br/>
 
 ------ suffix of function ------(REQUIRED)
 
 _h = using heap memory(free() needed)
-
- 
