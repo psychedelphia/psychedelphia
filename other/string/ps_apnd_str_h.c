@@ -129,7 +129,7 @@ char * apnd_fsub_str_h(char * this, const char * str, int32 len) { // function n
     if (str) { // execution
         strlength = strlen(str);
     
-        if (strlength >= len) { // execution
+        if (len > 0 && strlength >= len) { // execution
             if (this) {
                 thislength = strlen(this); 
 
