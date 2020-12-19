@@ -155,7 +155,7 @@ char * apnd_fsub_str_h(char * this, const char * str, int32 len) { // function n
                 }
             }
         } else { // exception
-            printf("st2: out of bounds!");
+            printf("str: out of bounds!");
             exit(EXIT_FAILURE);
         }
     }
@@ -196,7 +196,7 @@ char * apnd_isub_str_h(char * this, const char * str, int32 index, int32 len) { 
                 }
             }
         } else { // exception
-            printf("st2: out of bounds!");
+            printf("str: out of bounds!");
             exit(EXIT_FAILURE);
         }
     }
