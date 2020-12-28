@@ -30,4 +30,4 @@ typedef double                        float64;
 typedef long double                  float128;
 //-------------------------------------------------------------------------------
 
-#endif
+#endif /* ps_datatypes.h */
