@@ -1,7 +1,7 @@
 ps_functions in C language
 
 
------- following <stdint.h> Data Types  ------(MUST) pollution :(
+------ following <stdint.h> Data Types  ------ pollution :(
   
     *** i wish -> int8, uint8, int16, uint16, int32, uint32, int64, uint64, ... so on *** 
     ***           char, uchar, wchar, char16, char32                                  ***
@@ -36,18 +36,18 @@ string = a set of characters( with '\0' - end of character set )<br/><br/>
 
 it is up to you.(and me)<br/><br/>
 
------- alias(typedef) ------(RECOMMENDED)
+------ alias(typedef) ------
 
 alias - comment needed<br/><br/>
 
------- symbolic constant ------(RECOMMENDED)
+------ symbolic constant ------
 
 UPPER_CASE - using alphabet rather than number<br/><br/>
 
------- suffix of variable ------(RECOMMENDED)
+------ suffix of variable ------
 
-_p(general), _ph(heap pointer) or _ptr(speciall) = pointer<br/><br/>
+nothing or _p(general), _ph(heap pointer) and _ptr(speciall): pointer<br/><br/>
 
------- suffix of function ------(REQUIRED)
+------ suffix of function ------
 
 _h = using heap memory(free() needed)
