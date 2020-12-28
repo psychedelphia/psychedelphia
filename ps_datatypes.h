@@ -5,6 +5,9 @@
 // Data Types                                                  //
 //-------------------------------------------------------------//
 
+#ifndef __PS_DATATYPES_H__
+#define __PS_DATATYPES_H__
+
 #include <uchar.h>
 #include <wchar.h>
 
@@ -26,3 +29,5 @@ typedef float                         float32;
 typedef double                        float64;
 typedef long double                  float128;
 //-------------------------------------------------------------------------------
+
+#endif
