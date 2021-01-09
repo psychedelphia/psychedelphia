@@ -18,8 +18,8 @@ void ps_to_binary(int32 value); // convert decimal into binary form
 int32 main(void) {
     int32 x = 444444444;
      
-    printf("x  = %10d: ",  x); /* << */ ps_to_binary(x);  /* << */ puts("");
-    printf("~x = %10d: ", ~x); /* << */ ps_to_binary(~x); /* << */ puts("");
+    printf("x  = %11d: ",  x); /* << */ ps_to_binary(x);  /* << */ puts("");
+    printf("~x = %11d: ", ~x); /* << */ ps_to_binary(~x); /* << */ puts("");
 
   return SUCCESS; 
 }
