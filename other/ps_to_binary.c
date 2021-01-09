@@ -27,34 +27,41 @@ int32 main(void) {
 //------------------------------
 // ps_to_binary() implementation 
 void ps_to_binary(int32 value) {
-    const int32 INT_MIN = -2147483648;
-    enum flag { OFF = 0, ON = 1 } sign_switch = OFF; // Off = negative, on = positive    
-    int32 max_bit = 32;
-    int32 mask = INT_MIN; // 10000000 00000000 00000000 00000000
-  
-    // efficiency for loop (0 <= value <= 2147483647)
-    if (value >= 0) {
-        mask = 1073741824; // 01000000 00000000 00000000 00000000
-        sign_switch = ON;
-        max_bit = 31;
+    int32 max_bit = 31;
+    int32 mask = 1073741824; // 01000000 00000000 00000000 0000000
+
+    // efficiency for loop 
+    if (value >= 0) { // (0 <= value <= 2147483647)
         printf("0");
         
-        if (value < 16777216) { 
+        if (value < 256) { 
+            max_bit = 8;
+            mask >>= 23;
+            printf("0000000 00000000 00000000 ");
+        } else if (value < 65536) {
+            max_bit = 16;
+            mask >>= 15;
+            printf("0000000 00000000 ");
+        } else if (value < 16777216) {
             max_bit = 24;
             mask >>= 7;
             printf("0000000 ");
-            
-            if (value < 65536) {
-                max_bit = 16;
-                mask >>= 8;
-                printf("00000000 ");
-                
-                if (value < 256) {
-                    max_bit = 8;
-                    mask >>= 8;
-                    printf("00000000 ");
-                }
-            }
+        }
+    } else { // (-2147483648 <= value < 0)
+        printf("1");
+        
+        if (value > -257) { 
+            max_bit = 8;
+            mask >>= 23;
+            printf("1111111 11111111 11111111 ");
+        } else if (value > -65537) {
+            max_bit = 16;
+            mask >>= 15;
+            printf("1111111 11111111 ");
+        } else if (value > -16777217) {
+            max_bit = 24;
+            mask >>= 7;
+            printf("1111111 ");
         }
     }
     
@@ -62,13 +69,6 @@ void ps_to_binary(int32 value) {
     for (register int32 i = max_bit - 1; i >= 0; i--) {
         printf("%d", (value & mask) ? 1 : 0);
         mask >>= 1;
-              
-        // prevent right shift with 1
-        if (sign_switch == OFF) {
-                             //    11000000 00000000 00000000 00000000
-            mask ^= INT_MIN; // -> 01000000 00000000 00000000 00000000
-            sign_switch = ON;
-        }
               
         if ((i & 7) == 0) printf(" "); // separator for reading
     }
