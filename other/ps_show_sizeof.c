@@ -21,6 +21,8 @@ int main(void) {
     return SUCCESS; 
 }
 
+//-----------------------------
+// show_sizeof() implementation 
 void show_sizeof() {
     printf("char     size: %ld\n", sizeof(char));
     printf("uchar    size: %ld\n", sizeof(uchar));
