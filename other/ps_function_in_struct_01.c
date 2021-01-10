@@ -22,13 +22,8 @@ typedef struct example{
 
 Example * __example_ptr; // All functions related to Example can use this pointer.
 
-// Explanation of Functions ------------------------------------------------------------
 // functions with struct example(Example) -----------------------------------
-//--------------------------------
-// push_number_st() implementation: input value into local variable 
-void push_number_st(int32 number) { // function name + "_st" (meaning: for struct)
-    __example_ptr->number = number;
-}
+void push_number_st(int32 number); // input value into local variable
 
 // minimize usage of (/ → * → - → +) operator and floating-point
 //----------------------
@@ -75,4 +70,10 @@ __example_ptr = &a; // for Example functions(must): usage of Example a
     else { printf("not equal!\n"); }
     
     return SUCCESS; 
+}
+
+//--------------------------------
+// push_number_st() implementation 
+void push_number_st(int32 number) { // function name + "_st" (meaning: for struct)
+    __example_ptr->number = number;
 }
