@@ -50,8 +50,8 @@ int32 main(void) {
     return SUCCESS;
 }
 
-//----------------------------
-// eight_by_one implementation
+//------------------------------
+// eight_by_one() implementation
 int32 eight_by_one() {
     int32 a = 1, b = 0;
     int32 temp = 0;
@@ -70,8 +70,8 @@ int32 eight_by_one() {
     return temp;
 }
 
-//--------------------------
-// one_by_one implementation
+//----------------------------
+// one_by_one() implementation
 int32 one_by_one() {
     int32 a = 1, b = 0;
     int32 temp = 0;
