@@ -46,8 +46,8 @@ int32 main(void) {
     return SUCCESS; 
 }
 
-//-------------------------
-// precision implementation
+//---------------------------
+// precision() implementation
 void precision(float64 number, int32 value) {
     switch (value) {
         case  1 : printf("%.1lf",  number); /* \n */ break;
