@@ -46,6 +46,8 @@ int32 main(void) {
     return SUCCESS; 
 }
 
+//--------------------------------
+// numeric_string() implementation
 bool numeric_string(const char * string) {
     bool state;
     int64 length;
