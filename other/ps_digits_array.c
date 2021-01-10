@@ -73,8 +73,8 @@ int32 main(void) {
     return SUCCESS; 
 }
 
-//----------------------------
-// digits_array implementation
+//--------------------------------
+// digits_array01() implementation
 int32 * digits_array01(int32 * digits, uint32 value) {
     int32 * digits_local = digits;
     
@@ -94,8 +94,8 @@ int32 * digits_array01(int32 * digits, uint32 value) {
     return digits_local;
 }
 
-//----------------------------
-// digits_array implementation
+//--------------------------------
+// digits_array02() implementation
 int32 * digits_array02(int32 * digits, uint32 value) {
     int32 * digits_local = digits;
     float64 before = 0.0, after = 0.0;
