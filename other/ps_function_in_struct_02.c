@@ -18,13 +18,8 @@ struct example{
     void (* push_number)(Example * str, int32 number);
 };
 
-// Explanation of Functions ------------------------------------------------------------
-// functions with struct example(Example) -----------------------------------
-//--------------------------------
-// push_number_st() implementation: insert value into local variable 
-void push_number_st(Example * str, int32 number) { // function name + "_st" (meaning: for struct)
-    str->number = number;
-}
+// functions with struct example(Example) ---------------------------------------
+void push_number_st(Example * str, int32 number); // insert value into local variable 
 
 // minimize usage of (/ → * → - → +) operator and floating-point
 //----------------------
@@ -67,4 +62,10 @@ int32 main(void) {
     else { printf("not equal!\n"); }
     
     return SUCCESS; 
+}
+
+//--------------------------------
+// push_number_st() implementation
+void push_number_st(Example * str, int32 number) { // function name + "_st" (meaning: for struct)
+    str->number = number;
 }
