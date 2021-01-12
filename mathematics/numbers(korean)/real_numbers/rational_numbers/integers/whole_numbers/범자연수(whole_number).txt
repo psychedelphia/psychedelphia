@@ -1,1 +1,3 @@
 범자연수(whole numbers)
+
+범자연수(whole numbers) - 0(zeor), 자연수(natural numbers)
