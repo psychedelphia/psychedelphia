@@ -63,7 +63,7 @@ int32 decimal_places(float128 x) {
         
             if (x_origin == x_zero) {
                 intx_zero /= 10;
-                intx_origin /=10;
+                intx_origin /= 10;
             } else {
                 result = i;
                 i = 0;
