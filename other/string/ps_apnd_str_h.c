@@ -61,6 +61,12 @@ char * apnd_str_h(char * this, const char * str) { // function name + "_h" (mean
             this = (char * )realloc(this, sizeof(char) * (thislength + strlength + 1));
 
             if (this) { // execution
+                if (this != temp) {
+                    temp = term_str(temp);
+                } else {
+                    temp = NULL;
+                }
+            
                 memcpy(this + thislength, str, strlength);
                 *(this + thislength + strlength) = '\0';
             } else { // exception
@@ -96,6 +102,12 @@ char * apnd_char_str_h(char * this, const char c, int num) { // function name + 
             this = (char * )realloc(this, sizeof(char) * (thislength + num + 1));
         
             if (this) { // execution
+                if (this != temp) {
+                    temp = term_str(temp);
+                } else {
+                    temp = NULL;
+                }
+
                 memset(this + thislength, c, num);
                 *(this + thislength + num) = '\0';
             } else { // exception
@@ -137,9 +149,16 @@ char * apnd_fsub_str_h(char * this, const char * str, int32 len) { // function n
                 this = (char * )realloc(this, sizeof(char) * (thislength + len + 1));
         
                 if (this) { // execution         
+                    if (this != temp) {
+                        temp = term_str(temp);
+                    } else {
+                        temp = NULL;
+                    }
+
                     memcpy(this + thislength, str, len);
                     *(this + thislength + len) = '\0';
                 } else { // exception
+                    temp = term_str(temp);
                     printf("memory is not allocated!");
                     exit(EXIT_FAILURE);
                 }
@@ -178,9 +197,16 @@ char * apnd_isub_str_h(char * this, const char * str, int32 index, int32 len) { 
                 this = (char * )realloc(this, sizeof(char) * (thislength + len + 1));
         
                 if (this) { // execution       
+                    if (this != temp) {
+                        temp = term_str(temp);
+                    } else {
+                        temp = NULL;
+                    }
+
                     memcpy(this + thislength, str + index, len);  
                     *(this + thislength + len) = '\0';
                 } else { // exception
+                    temp = term_str(temp);
                     printf("memory is not allocated!");
                     exit(EXIT_FAILURE);
                 }
