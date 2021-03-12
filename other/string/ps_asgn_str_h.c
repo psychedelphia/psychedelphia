@@ -58,11 +58,7 @@ char * asgn_str_h(char * this, const char * str) {
                 this = (char * )realloc(this, (sizeof(char) * (strlength + 1)));
                 
                 if (this) {
-                    if (this != temp) {
-                        temp = term_str(temp);
-                    } else {
-                        temp = NULL;
-                    }
+                    temp = NULL;
 
                     memcpy(this, str, strlength);
                     *(this + strlength) = '\0';
@@ -100,11 +96,7 @@ char * asgn_char_str_h(char * this, const char c, int num) {
                 this = (char * )realloc(this, sizeof(char) * (num + 1));
                 
                 if (this) {
-                    if (this != temp) {
-                        temp = term_str(temp);
-                    } else {
-                        temp = NULL;
-                    }
+                    temp = NULL;
                     
                     memset(this, c, num);
                     *(this + num) = '\0';
@@ -152,11 +144,7 @@ char * asgn_fsub_str_h(char * this, const char * str, int32 len) {
                     this = (char * )realloc(this, (sizeof(char) * (len + 1)));
                 
                     if (this) {
-                        if (this != temp) {
-                            temp = term_str(temp);
-                        } else {
-                            temp = NULL;
-                        }
+                        temp = NULL;
 
                         memcpy(this, str, len);
                         *(this + len) = '\0';
@@ -201,11 +189,7 @@ char * asgn_isub_str_h(char * this, const char * str, int32 index, int32 len) {
                     this = (char * )realloc(this, (sizeof(char) * (len + 1)));
                 
                     if (this) {
-                        if (this != temp) {
-                            temp = term_str(temp);
-                        } else {
-                            temp = NULL;
-                        }
+                        temp = NULL;
                         
                         memcpy(this, str + index, len);
                         *(this + len) = '\0';
