@@ -1,1 +1,1 @@
-Practice makes perfect (Practice > Perfect)
+Practice makes perfect (Practice:less mistakes > Perfect)
